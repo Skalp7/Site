@@ -11,14 +11,14 @@ export function SkillsToolsSection({ skills, tools }: SkillsToolsSectionProps) {
     <section className="bg-ivory py-20 sm:py-24">
       <Container className="space-y-10">
         <SectionHeading
-          eyebrow="Capabilities"
-          title="Skills and tools presented as a practical working stack."
-          description="The goal is to communicate versatility while keeping the selection focused on the tools and competencies that matter to employers and premium clients."
+          eyebrow="Compétences"
+          title="Compétences et outils présentés comme un stack de travail concret."
+          description="L’objectif est de communiquer la polyvalence tout en gardant une sélection focalisée sur les outils et savoir-faire utiles aux recruteurs et clients premium."
         />
 
         <div className="grid gap-5 lg:grid-cols-2">
           <div className="rounded-[2rem] border border-line/70 bg-white/80 p-6 shadow-panel">
-            <p className="text-[11px] uppercase tracking-[0.28em] text-muted">Skills</p>
+            <p className="text-[11px] uppercase tracking-[0.28em] text-muted">Compétences</p>
             <div className="mt-5 flex flex-wrap gap-3">
               {skills.map((skill) => (
                 <span key={skill} className="rounded-full border border-line bg-[#f5efe7] px-4 py-2 text-sm text-ink">
@@ -29,7 +29,7 @@ export function SkillsToolsSection({ skills, tools }: SkillsToolsSectionProps) {
           </div>
 
           <div className="rounded-[2rem] border border-line/70 bg-white/80 p-6 shadow-panel">
-            <p className="text-[11px] uppercase tracking-[0.28em] text-muted">Tools</p>
+            <p className="text-[11px] uppercase tracking-[0.28em] text-muted">Outils</p>
             <div className="mt-5 flex flex-wrap gap-3">
               {tools.map((tool) => (
                 <span key={tool} className="rounded-full border border-line bg-[#f5efe7] px-4 py-2 text-sm text-ink">

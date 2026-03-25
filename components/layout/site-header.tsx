@@ -10,9 +10,9 @@ import { siteConfig } from "@/data/site";
 import { cn } from "@/lib/utils";
 
 const navigation = [
-  { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects" },
-  { href: "/about", label: "About" },
+  { href: "/", label: "Accueil" },
+  { href: "/projects", label: "Projets" },
+  { href: "/about", label: "À propos" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -74,7 +74,7 @@ export function SiteHeader() {
           type="button"
           onClick={() => setIsOpen((value) => !value)}
           className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/6 text-white md:hidden"
-          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
         >
           {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>

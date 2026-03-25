@@ -8,13 +8,13 @@ export function HomeIntro() {
     <section className="bg-ivory py-20 sm:py-24">
       <Container className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
         <AnimatedReveal>
-          <SectionHeading eyebrow="Profile" title="A designer bridging brand, motion and digital craft." />
+          <SectionHeading eyebrow="Profil" title="Un designer à la croisée de la marque, du motion et du design digital." />
         </AnimatedReveal>
         <AnimatedReveal delay={0.1} className="space-y-6">
           <p className="text-lg leading-8 text-muted">{siteConfig.intro}</p>
           <p className="text-base leading-8 text-muted">
-            The portfolio is structured to help recruiters and clients understand not only the final visuals, but also the
-            reasoning, process and execution quality behind each project.
+            Le portfolio est structuré pour aider recruteurs et clients à comprendre non seulement les visuels finaux, mais
+            aussi la réflexion, la méthode et la qualité d’exécution derrière chaque projet.
           </p>
         </AnimatedReveal>
       </Container>

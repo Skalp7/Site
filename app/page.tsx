@@ -22,12 +22,12 @@ export default function HomePage() {
       <SkillsToolsSection skills={siteConfig.skills} tools={siteConfig.tools} />
       <TestimonialsPlaceholder />
       <CtaBand
-        title="Built to support recruitment conversations and premium freelance opportunities."
-        description="The content and structure are ready to be adapted with your final copy, visuals, motion reels and recommendations."
+        title="Conçu pour soutenir des échanges de recrutement et des opportunités freelance premium."
+        description="Le contenu et la structure sont prêts à être adaptés avec tes textes finaux, tes visuels, tes reels motion et tes recommandations."
         primaryHref="/contact"
-        primaryLabel="Discuss a role"
+        primaryLabel="Parler d’un poste"
         secondaryHref="/projects"
-        secondaryLabel="Browse all projects"
+        secondaryLabel="Voir tous les projets"
       />
       <ContactSection />
     </>

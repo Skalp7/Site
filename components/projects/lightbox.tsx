@@ -32,7 +32,7 @@ export function Lightbox({ item, onClose }: LightboxProps) {
               type="button"
               onClick={onClose}
               className="absolute right-4 top-4 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/8 text-white"
-              aria-label="Close visual"
+              aria-label="Fermer le visuel"
             >
               <X className="h-5 w-5" />
             </button>

@@ -15,10 +15,10 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
       <Container className="space-y-10">
         <AnimatedReveal>
           <SectionHeading
-            eyebrow="Selected work"
-            title="Projects presented with strategic context, not just visuals."
-            description="Each case study is structured to feel credible in a hiring context while staying polished enough for premium freelance positioning."
-            action={<ButtonLink href="/projects" variant="secondary">See all projects</ButtonLink>}
+            eyebrow="Projets sélectionnés"
+            title="Des projets présentés avec du contexte stratégique, pas seulement des visuels."
+            description="Chaque case study est structuré pour rester crédible dans un contexte de recrutement, tout en étant suffisamment premium pour soutenir un positionnement freelance."
+            action={<ButtonLink href="/projects" variant="secondary">Voir tous les projets</ButtonLink>}
           />
         </AnimatedReveal>
 

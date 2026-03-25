@@ -23,7 +23,7 @@ export function CtaBand({
       <Container>
         <div className="rounded-[2.25rem] border border-line bg-[#111723] px-6 py-10 text-white shadow-2xl sm:px-10 lg:flex lg:items-end lg:justify-between">
           <div className="max-w-2xl space-y-4">
-            <p className="text-[11px] uppercase tracking-[0.28em] text-white/44">Opportunities</p>
+            <p className="text-[11px] uppercase tracking-[0.28em] text-white/44">Opportunités</p>
             <h2 className="font-display text-4xl leading-none sm:text-5xl">{title}</h2>
             <p className="text-base leading-8 text-white/64">{description}</p>
           </div>

@@ -16,8 +16,8 @@ export function ServicesSection({ services }: ServicesSectionProps) {
         <AnimatedReveal>
           <SectionHeading
             eyebrow="Services"
-            title="A versatile practice designed for premium brand and content needs."
-            description="The site is ready to support job applications, but its service framing also helps position the work for selective freelance engagements."
+            title="Une pratique polyvalente pensée pour des besoins de marque et de contenu premium."
+            description="Le site est conçu pour les candidatures, mais sa présentation des services aide aussi à positionner le travail sur des missions freelance plus sélectives."
           />
         </AnimatedReveal>
 

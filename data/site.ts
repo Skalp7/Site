@@ -4,32 +4,32 @@ export const siteConfig = {
   location: "Paris / Remote",
   email: "hello@pascalmaraval.com",
   phone: "+33 6 12 34 56 78",
-  availability: "Available for in-house roles and selected freelance missions.",
-  heroEyebrow: "Graphic design, motion, digital content",
+  availability: "Disponible pour des postes en interne et des missions freelance sélectionnées.",
+  heroEyebrow: "Design graphique, motion, contenu digital",
   heroIntro:
-    "A premium portfolio built to present visual systems, motion-first storytelling and digital design with clarity, restraint and character.",
+    "Un portfolio premium conçu pour présenter des systèmes visuels, du storytelling en mouvement et du design digital avec clarté, maîtrise et personnalité.",
   intro:
-    "I design identities, campaigns and digital assets with an editorial eye, a production mindset and a taste for refined systems that perform in real contexts.",
+    "Je conçois des identités, des campagnes et des assets digitaux avec un regard éditorial, une logique de production et un goût pour les systèmes raffinés qui fonctionnent dans des contextes réels.",
   about:
-    "My practice sits between brand thinking, visual craft and digital execution. I work across identities, print, motion, social content and interface design, with a method shaped by clarity, rhythm and consistency.",
+    "Ma pratique se situe à la croisée de la réflexion de marque, de l’exigence graphique et de l’exécution digitale. J’interviens sur l’identité, le print, le motion, le contenu social et le design d’interface, avec une méthode guidée par la clarté, le rythme et la cohérence.",
   recruitmentCta:
-    "Looking for a designer who can move between branding, motion and digital execution with the same level of care.",
+    "À la recherche d’un designer capable de naviguer entre branding, motion et exécution digitale avec le même niveau d’exigence.",
   freelanceCta:
-    "Need a premium freelance partner for a launch, a campaign or a design refresh.",
+    "Besoin d’un partenaire freelance premium pour un lancement, une campagne ou une refonte visuelle.",
   seoDescription:
-    "Premium multimedia graphic designer portfolio blending branding, motion design, print and digital craft.",
+    "Portfolio premium de multimedia graphic designer mêlant branding, motion design, print et design digital.",
   socialLinks: [
     { label: "LinkedIn", href: "https://www.linkedin.com" },
     { label: "Behance", href: "https://www.behance.net" },
     { label: "Instagram", href: "https://www.instagram.com" },
   ],
   skills: [
-    "Brand systems",
-    "Art direction",
-    "Campaign design",
+    "Systèmes de marque",
+    "Direction artistique",
+    "Design de campagne",
     "Motion design",
-    "Social content",
-    "Editorial layouts",
+    "Contenus social media",
+    "Mise en page éditoriale",
     "UI design",
     "Design systems",
   ],
@@ -46,27 +46,27 @@ export const siteConfig = {
   process: [
     {
       step: "01",
-      title: "Frame the intent",
+      title: "Cadrer l’intention",
       description:
-        "Clarify business context, audience, constraints and the exact perception the work needs to create.",
+        "Clarifier le contexte, la cible, les contraintes et la perception exacte que le projet doit produire.",
     },
     {
       step: "02",
-      title: "Build the visual system",
+      title: "Construire le système visuel",
       description:
-        "Translate strategy into a graphic language that feels distinctive, scalable and production-ready.",
+        "Traduire la stratégie en un langage graphique distinctif, scalable et prêt pour la production.",
     },
     {
       step: "03",
-      title: "Deploy across touchpoints",
+      title: "Déployer sur les points de contact",
       description:
-        "Apply the system with precision across print, digital, motion and presentation assets.",
+        "Déployer le système avec précision sur le print, le digital, le motion et les supports de présentation.",
     },
     {
       step: "04",
-      title: "Refine for impact",
+      title: "Affiner pour maximiser l’impact",
       description:
-        "Adjust pacing, hierarchy and micro-details to sharpen both usability and perceived quality.",
+        "Ajuster le rythme, la hiérarchie et les micro-détails pour renforcer à la fois l’usage et la qualité perçue.",
     },
   ],
 };

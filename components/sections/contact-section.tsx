@@ -10,16 +10,16 @@ export function ContactSection() {
       <Container className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="space-y-5">
           <p className="text-[11px] uppercase tracking-[0.28em] text-white/42">Contact</p>
-          <h2 className="font-display text-4xl leading-none sm:text-5xl lg:text-6xl">Open to design roles and selected freelance missions.</h2>
+          <h2 className="font-display text-4xl leading-none sm:text-5xl lg:text-6xl">Ouvert aux postes en design et à des missions freelance sélectionnées.</h2>
           <p className="max-w-2xl text-base leading-8 text-white/64">
-            The portfolio is designed to help conversations start quickly, whether the need is an in-house graphic designer profile or a premium project-based collaboration.
+            Le portfolio est conçu pour faire démarrer les échanges rapidement, qu’il s’agisse d’un besoin en interne ou d’une collaboration freelance premium.
           </p>
           <div className="flex flex-wrap gap-3">
             <ButtonLink href={`mailto:${siteConfig.email}`} variant="ghost">
-              Email me
+              M’écrire
             </ButtonLink>
             <ButtonLink href="/about" variant="secondary" className="border-white/12 bg-white text-ink">
-              Learn more
+              En savoir plus
             </ButtonLink>
           </div>
         </div>
@@ -33,11 +33,11 @@ export function ContactSection() {
               </Link>
             </div>
             <div className="border-b border-white/10 pb-4">
-              <p className="text-[11px] uppercase tracking-[0.28em] text-white/42">Location</p>
+              <p className="text-[11px] uppercase tracking-[0.28em] text-white/42">Localisation</p>
               <p className="mt-2 text-white/78">{siteConfig.location}</p>
             </div>
             <div>
-              <p className="text-[11px] uppercase tracking-[0.28em] text-white/42">Social</p>
+              <p className="text-[11px] uppercase tracking-[0.28em] text-white/42">Réseaux</p>
               <div className="mt-2 flex flex-wrap gap-4 text-white/78">
                 {siteConfig.socialLinks.map((link) => (
                   <Link key={link.label} href={link.href} className="hover:text-white">

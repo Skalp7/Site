@@ -36,7 +36,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
           <div className="grid gap-6">
             <ProjectMetadata project={project} />
             <div className="rounded-[2rem] border border-line/70 bg-white/80 p-6 shadow-panel">
-              <p className="text-[11px] uppercase tracking-[0.26em] text-muted">Deliverables</p>
+              <p className="text-[11px] uppercase tracking-[0.26em] text-muted">Livrables</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {project.deliverables.map((item) => (
                   <span key={item} className="rounded-full border border-line bg-[#f5efe7] px-3 py-2 text-sm text-ink">
@@ -53,7 +53,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         <Container className="space-y-8">
           <div className="grid gap-3">
             <p className="text-[11px] uppercase tracking-[0.28em] text-muted">Case study</p>
-            <h2 className="font-display text-4xl text-ink sm:text-5xl">Gallery and creative breakdown</h2>
+            <h2 className="font-display text-4xl text-ink sm:text-5xl">Galerie et décryptage créatif</h2>
           </div>
 
           <div className="grid gap-4 lg:grid-cols-3">
@@ -74,7 +74,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
           <Container className="space-y-6">
             <div className="grid gap-3">
               <p className="text-[11px] uppercase tracking-[0.28em] text-muted">Motion</p>
-              <h2 className="font-display text-4xl text-ink sm:text-5xl">Video integration ready for campaign reels and case-study edits.</h2>
+              <h2 className="font-display text-4xl text-ink sm:text-5xl">Intégration vidéo prête pour les reels de campagne et les montages de case study.</h2>
             </div>
             <ProjectVideo video={project.video} />
           </Container>
@@ -86,7 +86,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
           <ProjectImpact project={project} />
           <div className="flex flex-wrap gap-3">
             <ButtonLink href="/projects" variant="ghost">
-              Back to projects
+              Retour aux projets
             </ButtonLink>
             <ButtonLink href="/contact" variant="secondary" className="border-white/12 bg-white text-ink">
               Contact

@@ -8,9 +8,9 @@ export default function ProjectsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Projects"
-        title="A curated portfolio spanning branding, print, motion, digital content and UI."
-        description="The case studies are intentionally varied to present a hybrid profile while keeping the tone credible, structured and premium."
+        eyebrow="Projets"
+        title="Un portfolio curaté couvrant branding, print, motion, contenu digital et UI."
+        description="Les case studies sont volontairement variés pour présenter un profil hybride tout en gardant un ton crédible, structuré et premium."
       />
 
       <section className="bg-ivory py-20 sm:py-24">

@@ -21,10 +21,10 @@ export function HomeHero() {
 
           <div className="flex flex-wrap gap-3">
             <ButtonLink href="/projects" variant="ghost">
-              View selected projects
+              Voir les projets
             </ButtonLink>
             <ButtonLink href="/contact" variant="secondary" className="border-white/12 bg-white text-ink">
-              Start a conversation
+              Entrer en contact
             </ButtonLink>
           </div>
         </div>
@@ -32,19 +32,19 @@ export function HomeHero() {
         <div className="grid gap-4">
           <div className="grid gap-6 rounded-[2rem] border border-white/10 bg-white/6 p-6 backdrop-blur-xl">
             <div className="flex items-center justify-between">
-              <p className="text-[11px] uppercase tracking-[0.28em] text-white/44">Positioning</p>
+              <p className="text-[11px] uppercase tracking-[0.28em] text-white/44">Positionnement</p>
               <ArrowDownRight className="h-5 w-5 text-white/44" />
             </div>
             <div className="grid gap-4 text-sm leading-7 text-white/72">
-              <p>Corporate clarity with a personal studio signature.</p>
-              <p>Built to support recruitment, premium freelance work and future case-study expansion.</p>
+              <p>Une clarté corporate avec une signature de studio personnel.</p>
+              <p>Un site pensé pour soutenir le recrutement, le freelance premium et l’évolution future en vrais case studies.</p>
             </div>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              { label: "Focus", value: "Branding, video, digital content" },
-              { label: "Approach", value: "Precise systems with editorial sensibility" },
+              { label: "Focus", value: "Branding, vidéo, contenu digital" },
+              { label: "Approche", value: "Des systèmes précis avec une sensibilité éditoriale" },
             ].map((item) => (
               <div key={item.label} className="rounded-[1.75rem] border border-white/10 bg-white/6 p-5 backdrop-blur-xl">
                 <p className="text-[11px] uppercase tracking-[0.28em] text-white/44">{item.label}</p>

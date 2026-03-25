@@ -1,22 +1,22 @@
 export const services = [
   {
-    title: "Brand Identity",
+    title: "Identité de marque",
     description:
-      "Naming support, visual systems, art direction and rollout guidelines for premium, coherent brands.",
+      "Accompagnement au naming, systèmes visuels, direction artistique et guidelines de déploiement pour des marques premium et cohérentes.",
   },
   {
-    title: "Campaign & Content",
+    title: "Campagnes & contenus",
     description:
-      "Launch visuals, social media assets, multi-format content packs and digital storytelling systems.",
+      "Visuels de lancement, assets social media, kits de contenus multi-formats et systèmes de storytelling digital.",
   },
   {
-    title: "Motion & Video",
+    title: "Motion & vidéo",
     description:
-      "Teasers, reels, motion systems and cutdowns designed to extend brand language into movement.",
+      "Teasers, reels, systèmes motion et déclinaisons vidéo conçus pour prolonger le langage de marque dans le mouvement.",
   },
   {
-    title: "UI & Digital Design",
+    title: "UI & design digital",
     description:
-      "Landing pages, portfolio ecosystems and interface concepts with strong hierarchy and modern polish.",
+      "Landing pages, écosystèmes portfolio et concepts d’interface avec une forte hiérarchie et une finition contemporaine.",
   },
 ];

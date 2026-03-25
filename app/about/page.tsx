@@ -9,9 +9,9 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About"
-        title="A premium, versatile profile built for modern design teams and selective freelance work."
-        description="This page gives more room to the positioning, method and capabilities behind the portfolio."
+        eyebrow="À propos"
+        title="Un profil premium et polyvalent conçu pour des équipes design modernes et un freelance sélectif."
+        description="Cette page donne plus d’espace au positionnement, à la méthode et aux compétences derrière le portfolio."
       />
       <AboutStory />
       <ProcessSection items={siteConfig.process} />

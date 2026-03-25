@@ -16,9 +16,9 @@ export function ProcessSection({ items }: ProcessSectionProps) {
       <Container className="space-y-10">
         <AnimatedReveal>
           <SectionHeading
-            eyebrow="Method"
-            title="A process built to keep creative work aligned, consistent and production-ready."
-            description="The tone stays human and collaborative, but the structure remains rigorous enough for business, brand and delivery constraints."
+            eyebrow="Méthode"
+            title="Un process conçu pour garder le travail créatif aligné, cohérent et prêt pour la production."
+            description="Le ton reste humain et collaboratif, mais la structure demeure suffisamment rigoureuse pour les enjeux business, de marque et de livraison."
             className="border-white/10"
           />
         </AnimatedReveal>

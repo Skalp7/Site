@@ -3,8 +3,8 @@ import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 
 const placeholders = [
-  "Ready for hiring manager recommendations or stakeholder quotes.",
-  "A good place to add client feedback once real missions are documented.",
+  "Prêt à accueillir des recommandations de recruteurs, managers ou parties prenantes.",
+  "Un bon emplacement pour intégrer des retours clients dès que les missions réelles sont documentées.",
 ];
 
 export function TestimonialsPlaceholder() {
@@ -13,9 +13,9 @@ export function TestimonialsPlaceholder() {
       <Container className="space-y-10">
         <AnimatedReveal>
           <SectionHeading
-            eyebrow="Recommendations"
-            title="A clean structure already prepared for future testimonials."
-            description="For now, the section keeps the layout credible and scalable without relying on empty review widgets."
+            eyebrow="Recommandations"
+            title="Une structure propre déjà prête pour de futurs témoignages."
+            description="Pour l’instant, la section garde la mise en page crédible et scalable, sans dépendre de faux widgets d’avis."
           />
         </AnimatedReveal>
 

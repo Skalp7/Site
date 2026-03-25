@@ -8,7 +8,7 @@ export function ProjectImpact({ project }: ProjectImpactProps) {
   return (
     <div className="grid gap-5 rounded-[2rem] border border-line/70 bg-[#111723] p-6 text-white shadow-panel">
       <div className="grid gap-2">
-        <p className="text-[11px] uppercase tracking-[0.26em] text-white/42">Result</p>
+        <p className="text-[11px] uppercase tracking-[0.26em] text-white/42">Résultat</p>
         <p className="max-w-3xl text-base leading-8 text-white/72">{project.impact}</p>
       </div>
       <div className="grid gap-4 md:grid-cols-3">
