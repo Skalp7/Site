@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #15181d;
+  --sand: #f4efe8;
+  --ivory: #fbf8f3;
+  --line: #d9d0c3;
+  --accent: #8e6949;
+  --muted: #5f615d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ivory);
+  color: var(--ink);
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(142, 105, 73, 0.2);
+}
+
+@layer base {
+  * {
+    @apply border-line;
+  }
+
+  body {
+    @apply font-sans antialiased;
+  }
+
+  a,
+  button,
+  input,
+  textarea {
+    @apply outline-none;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    @apply rounded-md ring-2 ring-accent ring-offset-2 ring-offset-ivory;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
