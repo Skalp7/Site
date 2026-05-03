@@ -1,14 +1,17 @@
 import Link from "next/link";
 
+import { AnimatedReveal } from "@/components/ui/animated-reveal";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
+import { ParallaxOrbs } from "@/components/ui/parallax-orbs";
 import { siteConfig } from "@/data/site";
 
 export function ContactSection() {
   return (
-    <section className="bg-[#0c1119] py-20 text-white sm:py-24">
-      <Container className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="space-y-5">
+    <section className="relative overflow-hidden bg-[#090d15] py-20 text-white sm:py-24">
+      <ParallaxOrbs theme="mixed" />
+      <Container className="relative grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+        <AnimatedReveal variant="left" className="space-y-5">
           <p className="text-[11px] uppercase tracking-[0.28em] text-white/42">Contact</p>
           <h2 className="font-display text-4xl leading-none sm:text-5xl lg:text-6xl">Ouvert aux postes en design et à des missions freelance sélectionnées.</h2>
           <p className="max-w-2xl text-base leading-8 text-white/64">
@@ -22,8 +25,9 @@ export function ContactSection() {
               En savoir plus
             </ButtonLink>
           </div>
-        </div>
+        </AnimatedReveal>
 
+        <AnimatedReveal variant="panel" delay={0.08}>
         <div className="rounded-[2rem] border border-white/10 bg-white/6 p-6 backdrop-blur-xl">
           <div className="grid gap-4 text-sm">
             <div className="border-b border-white/10 pb-4">
@@ -48,6 +52,7 @@ export function ContactSection() {
             </div>
           </div>
         </div>
+        </AnimatedReveal>
       </Container>
     </section>
   );

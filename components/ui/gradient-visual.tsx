@@ -17,7 +17,12 @@ export function GradientVisual({ tone, className, interactive = false }: Gradien
       )}
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.42),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(15,23,42,0.2),transparent_32%)]" />
-      <div className="absolute inset-0 opacity-70 mix-blend-soft-light [background-image:linear-gradient(110deg,transparent_20%,rgba(255,255,255,0.45)_50%,transparent_80%)]" />
+      <div
+        className={cn(
+          "absolute inset-0 opacity-70 mix-blend-soft-light [background-image:linear-gradient(110deg,transparent_20%,rgba(255,255,255,0.45)_50%,transparent_80%)]",
+          interactive && "animate-[shimmer_5s_linear_infinite]",
+        )}
+      />
       <div
         className={cn(
           "absolute -right-10 top-8 h-28 w-28 rounded-full border border-white/20 bg-white/15 backdrop-blur-xl",

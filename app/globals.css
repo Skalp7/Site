@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --ink: #15181d;
-  --sand: #f4efe8;
-  --ivory: #fbf8f3;
-  --line: #d9d0c3;
-  --accent: #8e6949;
-  --muted: #5f615d;
+  --ink: #10131a;
+  --sand: #e8ddd0;
+  --ivory: #f4eee6;
+  --line: #c5b7a6;
+  --accent: #9f6c42;
+  --muted: #58524c;
 }
 
 html {
@@ -16,7 +16,10 @@ html {
 }
 
 body {
-  background: var(--ivory);
+  background:
+    radial-gradient(circle at top left, rgba(159, 108, 66, 0.09), transparent 24%),
+    radial-gradient(circle at 85% 12%, rgba(62, 84, 124, 0.12), transparent 24%),
+    linear-gradient(180deg, #f4eee6 0%, #ece3d7 100%);
   color: var(--ink);
   text-rendering: optimizeLegibility;
 }
@@ -52,5 +55,24 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .section-noise {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03)),
+      radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.08), transparent 18%),
+      radial-gradient(circle at 90% 10%, rgba(159, 108, 66, 0.18), transparent 24%);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-28%) scale(1.05);
+  }
+  50% {
+    transform: translateX(22%) scale(1.1);
+  }
+  100% {
+    transform: translateX(68%) scale(1.05);
   }
 }

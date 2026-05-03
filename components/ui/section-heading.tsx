@@ -9,6 +9,7 @@ type SectionHeadingProps = {
   align?: "left" | "center";
   action?: ReactNode;
   className?: string;
+  tone?: "light" | "dark";
 };
 
 export function SectionHeading({
@@ -18,6 +19,7 @@ export function SectionHeading({
   align = "left",
   action,
   className,
+  tone = "light",
 }: SectionHeadingProps) {
   return (
     <div
@@ -29,10 +31,12 @@ export function SectionHeading({
     >
       <div className={cn("max-w-3xl space-y-4", align === "center" && "text-center")}>
         {eyebrow ? (
-          <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-muted">{eyebrow}</p>
+          <p className={cn("text-[11px] font-medium uppercase tracking-[0.32em]", tone === "dark" ? "text-white/48" : "text-muted")}>{eyebrow}</p>
         ) : null}
-        <h2 className="max-w-4xl font-display text-4xl leading-none text-ink sm:text-5xl lg:text-6xl">{title}</h2>
-        {description ? <p className="max-w-2xl text-base leading-7 text-muted">{description}</p> : null}
+        <h2 className={cn("max-w-4xl font-display text-4xl leading-none sm:text-5xl lg:text-6xl", tone === "dark" ? "text-white" : "text-ink")}>{title}</h2>
+        {description ? (
+          <p className={cn("max-w-2xl text-base leading-7", tone === "dark" ? "text-white/68" : "text-muted")}>{description}</p>
+        ) : null}
       </div>
       {action ? <div className="shrink-0">{action}</div> : null}
     </div>
