@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 
+import { ForsouthCaseStudy } from "@/components/projects/forsouth/forsouth-case-study";
 import { ProjectGallery } from "@/components/projects/project-gallery";
 import { ProjectMetadata } from "@/components/projects/project-metadata";
 import { ProjectVideo } from "@/components/projects/project-video";
@@ -24,6 +25,10 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 
   if (!project) {
     notFound();
+  }
+
+  if (project.slug === "forsouth-advisory") {
+    return <ForsouthCaseStudy project={project} />;
   }
 
   return (
