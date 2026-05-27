@@ -28,6 +28,8 @@ export type ProjectVideo = {
   note: string;
 };
 
+export type ProjectTier = "featured" | "selected" | "tailored";
+
 export type Project = {
   slug: string;
   title: string;
@@ -35,6 +37,8 @@ export type Project = {
   year: string;
   client: string;
   featured: boolean;
+  tier: ProjectTier;
+  statusLabel?: string;
   shortPitch: string;
   excerpt: string;
   role: string;

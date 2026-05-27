@@ -7,7 +7,7 @@ import { ProcessSection } from "@/components/sections/process-section";
 import { ServicesSection } from "@/components/sections/services-section";
 import { SkillsToolsSection } from "@/components/sections/skills-tools-section";
 import { TestimonialsPlaceholder } from "@/components/sections/testimonials-placeholder";
-import { featuredProjects } from "@/data/projects";
+import { featuredProjects, selectedProjects, tailoredApplicationProjects } from "@/data/projects";
 import { services } from "@/data/services";
 import { siteConfig } from "@/data/site";
 
@@ -17,6 +17,22 @@ export default function HomePage() {
       <HomeHero />
       <HomeIntro />
       <FeaturedProjects projects={featuredProjects} />
+      <FeaturedProjects
+        projects={selectedProjects}
+        eyebrow="Selected Works"
+        title="Des projets plus courts pour montrer la polyvalence graphique."
+        description="Une sélection de travaux plus compacts : identité, print, food branding, poster design et micro-projets professionnels."
+        variant="compact"
+        showAction={false}
+      />
+      <FeaturedProjects
+        projects={tailoredApplicationProjects}
+        eyebrow="Tailored Applications / Motion Adaptations"
+        title="Des adaptations de marque pensées comme candidatures personnalisées."
+        description="Ces projets ne sont pas présentés comme des mandats clients : ils montrent une capacité à lire une marque, adapter son langage et produire une proposition motion crédible."
+        variant="tailored"
+        showAction={false}
+      />
       <ServicesSection services={services} />
       <ProcessSection items={siteConfig.process} />
       <SkillsToolsSection skills={siteConfig.skills} tools={siteConfig.tools} />

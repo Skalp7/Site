@@ -7,10 +7,11 @@ type ProjectMetadataProps = {
 export function ProjectMetadata({ project }: ProjectMetadataProps) {
   const items = [
     { label: "Client", value: project.client },
-    { label: "Year", value: project.year },
-    { label: "Role", value: project.role },
-    { label: "Tools", value: project.tools.join(", ") },
-  ];
+    { label: "Année", value: project.year },
+    project.statusLabel ? { label: "Nature", value: project.statusLabel } : null,
+    { label: "Rôle", value: project.role },
+    { label: "Outils", value: project.tools.join(", ") },
+  ].filter((item): item is { label: string; value: string } => Boolean(item));
 
   return (
     <div className="grid gap-4 rounded-[2rem] border border-line/70 bg-white/80 p-6 shadow-panel">
