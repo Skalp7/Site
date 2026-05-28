@@ -6,6 +6,7 @@ import { ProjectGallery } from "@/components/projects/project-gallery";
 import { ProjectMetadata } from "@/components/projects/project-metadata";
 import { ProjectVideo } from "@/components/projects/project-video";
 import { Projet111CaseStudy } from "@/components/projects/projet-111/projet-111-case-study";
+import { PurpleCaseStudy } from "@/components/projects/purple-global-commerce/purple-case-study";
 import { PageHero } from "@/components/sections/page-hero";
 import { ProjectImpact } from "@/components/sections/project-impact";
 import { ProjectOverview } from "@/components/sections/project-overview";
@@ -39,6 +40,10 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 
   if (project.slug === "branner") {
     return <BrannerCaseStudy project={project} />;
+  }
+
+  if (project.slug === "purple-global-commerce") {
+    return <PurpleCaseStudy project={project} />;
   }
 
   return (

@@ -255,50 +255,88 @@ export const projects: Project[] = [
   {
     slug: "purple-global-commerce",
     title: "Purple Global Commerce",
-    category: "Packaging / Brand Identity / Marketing Design",
+    category: "Packaging / Brand Identity / B2B Communication",
     year: "2024",
     client: "Purple Global Commerce",
     featured: true,
     tier: "featured",
-    shortPitch: "Un écosystème packaging et marketing pour une jeune entreprise de commerce international.",
+    shortPitch:
+      "Identité visuelle, packaging et supports commerciaux pour une jeune entreprise de commerce international introduisant le Ube sur le marché français.",
     excerpt:
-      "Création d’une identité cohérente, de packagings alimentaires, de supports print et digitaux, de visuels commerciaux et d’assets e-commerce.",
-    role: "Packaging design, brand identity, marketing design et déclinaisons commerciales multi-supports.",
+      "Purple Global Commerce structure l’arrivée du Ube en France à travers une identité visuelle premium, une palette inspirée du produit, des packagings lisibles et une plaquette commerciale pensée pour convaincre un public B2B.",
+    role: "B2B brand identity, logo exploration, packaging system, commercial brochure, product photography direction and marketing assets.",
     tools: ["Illustrator", "Photoshop", "InDesign", "Figma"],
-    services: ["Packaging", "Brand identity", "Marketing assets", "E-commerce visuals"],
+    services: ["Packaging system", "Brand identity", "B2B communication", "Product storytelling"],
     tone: {
       name: "Global Shelf",
       background: "from-[#1a1027] via-[#6f3aa7] to-[#f1c453]",
       accent: "#f1c453",
     },
     context:
-      "L’entreprise avait besoin d’une image commerciale claire pour structurer ses gammes et soutenir ses ventes sur plusieurs supports.",
+      "Purple Global Commerce est une jeune entreprise de commerce international présente en France et aux Philippines, portée par deux associés expérimentés souhaitant renforcer les liens entre cultures et marchés à travers de nouveaux produits.",
     objective:
-      "Créer un langage visuel capable de fonctionner en packaging, en print, en digital et sur des supports e-commerce.",
+      "Créer une identité visuelle professionnelle et attractive capable de positionner le Ube comme un produit innovant, gourmand et différenciant sur le marché français.",
     approach:
-      "La direction privilégie une cohérence de gamme, une lisibilité immédiate et une identité assez flexible pour accompagner différents produits alimentaires.",
+      "Construire un univers visuel fondé sur la couleur du Ube, l’idée de guide, la confiance B2B et l’énergie d’une jeune entreprise internationale.",
     solution:
-      "Les packagings, supports marketing et visuels commerciaux ont été traités comme un système global, afin de renforcer la reconnaissance de marque.",
+      "Un système de marque combinant logo, palette violette, packagings, étiquettes produit, plaquette commerciale, photographie produit et visuels dérivés autour des usages culinaires du Ube.",
     impact:
-      "Le projet apporte à Purple Global Commerce une base visuelle plus professionnelle et plus cohérente pour ses communications commerciales.",
+      "Le projet démontre une capacité à traduire un produit émergent en identité commerciale claire, professionnelle et différenciante, adaptée au B2B comme aux supports marketing.",
     metrics: [
-      { label: "Supports", value: "Print + digital" },
-      { label: "Usage", value: "Retail / e-commerce" },
-      { label: "Système", value: "Packaging range" },
+      { label: "Produit phare", value: "Ube" },
+      { label: "Marché", value: "France / B2B" },
+      { label: "Supports", value: "Packaging + brochure" },
     ],
-    deliverables: ["Packagings alimentaires", "Identité visuelle", "Supports marketing", "Visuels e-commerce", "Assets commerciaux"],
+    deliverables: [
+      "Logo",
+      "Déclinaisons logo",
+      "Identité visuelle",
+      "Palette couleur",
+      "Packaging",
+      "Étiquettes recto / verso",
+      "Plaquette commerciale",
+      "Photos produit",
+      "Visuels produits dérivés",
+      "Supports marketing print",
+      "Supports digitaux",
+      "Visuels e-commerce",
+    ],
     sections: [
       {
-        title: "Logique de gamme",
-        body: "Le packaging devait fonctionner comme une famille visuelle, avec des repères constants et assez de flexibilité pour plusieurs produits.",
+        title: "Brand strategy",
+        body: "La stratégie positionne Purple Global Commerce comme une marque B2B jeune, dynamique et professionnelle, reliant commerce international, innovation produit, transparence et responsabilité autour du Ube.",
       },
       {
-        title: "Impact commercial",
-        body: "Les visuels ont été conçus pour être lisibles rapidement, utiles en vente et cohérents sur les canaux digitaux.",
+        title: "Logo exploration",
+        body: "L’exploration logo cherche un signe d’orientation : un repère moderne, distinctif et crédible, capable de guider un nouveau produit vers un nouveau marché sans tomber dans le folklore.",
       },
       {
-        title: "Écosystème multi-support",
-        body: "Print, e-commerce et supports commerciaux partagent une même direction pour éviter une perception fragmentée.",
+        title: "Color system",
+        body: "La palette combine #8171b8, #6a176e, #000000, #6eaa37 et #f1bd49 pour traduire la richesse du Ube, la fraîcheur produit, le contraste premium et l’énergie gourmande.",
+      },
+      {
+        title: "Packaging system",
+        body: "Le packaging concentre l’identité sur l’étiquette : un recto 4x6 inches pour l’impact commercial et un verso vertical 3x7 inches pour structurer l’information avec clarté.",
+      },
+      {
+        title: "Commercial brochure",
+        body: "La plaquette transforme le goût, la couleur et le potentiel du Ube en argumentaire B2B, avec une analogie subtile entre Paris 2024 et l’avantage concurrentiel du produit.",
+      },
+      {
+        title: "Product photography",
+        body: "La photographie produit met en avant la matière brute, la texture, le violet crémeux et le potentiel gourmand du Ube avec une direction claire et professionnelle.",
+      },
+      {
+        title: "Derived products",
+        body: "Les visuels dérivés montrent boissons, pâtisseries, glaces et desserts pour présenter le Ube comme un territoire gastronomique extensible, visuel et commercial.",
+      },
+      {
+        title: "Marketing applications",
+        body: "Les supports marketing print, digitaux et e-commerce prolongent l’identité avec une communication responsable, lisible et adaptée aux besoins de lancement commercial.",
+      },
+      {
+        title: "Final impact",
+        body: "Le système final professionnalise l’image de Purple Global Commerce et installe le Ube comme une innovation alimentaire crédible, premium et adaptée au marché français.",
       },
     ],
     gallery: [
