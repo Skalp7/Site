@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 
+import { BrannerCaseStudy } from "@/components/projects/branner/branner-case-study";
 import { ForsouthCaseStudy } from "@/components/projects/forsouth/forsouth-case-study";
 import { ProjectGallery } from "@/components/projects/project-gallery";
 import { ProjectMetadata } from "@/components/projects/project-metadata";
@@ -34,6 +35,10 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 
   if (project.slug === "projet-111") {
     return <Projet111CaseStudy project={project} />;
+  }
+
+  if (project.slug === "branner") {
+    return <BrannerCaseStudy project={project} />;
   }
 
   return (

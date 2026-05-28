@@ -176,45 +176,56 @@ export const projects: Project[] = [
     client: "Branner",
     featured: true,
     tier: "featured",
-    shortPitch: "Première manufacture française de four à pizza maison.",
+    shortPitch: "Identité visuelle et présence digitale pour la première manufacture française de four à pizza maison.",
     excerpt:
-      "Création d’un territoire de marque produit qui associe artisanat, innovation et désir d’objet autour d’un four à pizza domestique premium.",
-    role: "Logo, identité produit, supports de lancement, maquettes, site vitrine et interface web.",
-    tools: ["Illustrator", "Figma", "Photoshop", "Web design"],
-    services: ["Product branding", "Visual identity", "Launch assets", "Web design"],
+      "Branner associe innovation produit, fabrication française et culture de la pizza au feu de bois dans une identité chaleureuse, premium et cohérente sur print, web et supports événementiels.",
+    role: "Brand identity system, logo officiel, supports événementiels, storytelling éditorial, site vitrine et interface web.",
+    tools: ["Illustrator", "Figma", "Photoshop", "InDesign", "Web design"],
+    services: ["Product branding", "Brand identity", "Event communication", "Web design"],
     tone: {
       name: "Craft Heat",
       background: "from-[#150f0a] via-[#7a2f1b] to-[#f0b35a]",
       accent: "#f0b35a",
     },
     context:
-      "Branner devait exister comme une marque produit premium, capable de valoriser à la fois la fabrication française et l’usage domestique.",
+      "Branner est une marque française dédiée au four à pizza maison, née d’une passion familiale pour la pizza, la convivialité et la cuisine extérieure.",
     objective:
-      "Créer un logo emblématique et un écosystème de lancement qui donnent au produit une perception solide, désirable et contemporaine.",
+      "Créer une identité de marque capable de valoriser à la fois l’innovation du produit, la chaleur de l’univers pizza, la fabrication française et la crédibilité commerciale de la marque.",
     approach:
-      "La direction combine des codes d’atelier, de chaleur et de précision, avec une interface claire qui met le produit au centre.",
+      "Construire un système visuel autour du feu, de la montagne, de la chaleur et du savoir-faire, avec une palette simple, impactante et facilement déclinable.",
     solution:
-      "L’identité a été déployée sur les supports de lancement, les maquettes produit et le site vitrine, en gardant une cohérence entre objet, marque et expérience web.",
+      "Une identité de marque complète combinant logo emblématique, palette chaude, supports événementiels, storytelling éditorial et interface web cohérente.",
     impact:
-      "Le projet donne à Branner une base de marque crédible pour se présenter comme une manufacture produit haut de gamme.",
+      "Le projet démontre une capacité à structurer une marque produit de manière complète, en reliant identité visuelle, storytelling, supports print, expérience web et crédibilité commerciale.",
     metrics: [
-      { label: "Nature", value: "Product brand" },
-      { label: "Périmètre", value: "Logo + web" },
-      { label: "Positionnement", value: "Premium maison" },
+      { label: "Positionnement", value: "Manufacture française" },
+      { label: "Univers", value: "Feu / produit / partage" },
+      { label: "Déploiement", value: "Print + web + salon" },
     ],
-    deliverables: ["Logo", "Charte graphique", "Maquettes produit", "Supports de lancement", "Site vitrine", "Interface web"],
+    deliverables: [
+      "Logo officiel",
+      "Identité visuelle",
+      "Palette couleur",
+      "Supports événementiels",
+      "Kakémono salon",
+      "Supports de lancement",
+      "Page Notre Histoire",
+      "Site vitrine",
+      "Interface web",
+      "Direction artistique",
+    ],
     sections: [
       {
-        title: "Signature produit",
-        body: "Le logo devait être mémorisable, robuste et suffisamment emblématique pour vivre sur un produit, un site et des supports commerciaux.",
+        title: "Product storytelling",
+        body: "L’identité devait porter une histoire de feu, de fabrication française, d’innovation produit et de convivialité familiale.",
       },
       {
-        title: "Territoire de marque",
-        body: "La chaleur, la matière et la précision ont guidé une identité à la fois artisanale et contemporaine.",
+        title: "Visual language",
+        body: "Le logo fusionne flamme, montagne et typographie pour construire un signe chaleureux, robuste et immédiatement propriétaire.",
       },
       {
-        title: "Expérience web",
-        body: "Le site vitrine structure les arguments produit tout en conservant une esthétique nette, orientée désir et confiance.",
+        title: "Digital brand experience",
+        body: "Le site, la page histoire et les supports de lancement prolongent la charte dans une expérience claire, premium et commerciale.",
       },
     ],
     gallery: [
