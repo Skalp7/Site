@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 
 import { BrannerCaseStudy } from "@/components/projects/branner/branner-case-study";
+import { CultureCaseStudy } from "@/components/projects/culture-arabesque/culture-case-study";
 import { ForsouthCaseStudy } from "@/components/projects/forsouth/forsouth-case-study";
 import { ProjectGallery } from "@/components/projects/project-gallery";
 import { ProjectMetadata } from "@/components/projects/project-metadata";
@@ -44,6 +45,10 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 
   if (project.slug === "purple-global-commerce") {
     return <PurpleCaseStudy project={project} />;
+  }
+
+  if (project.slug === "culture-arabesque") {
+    return <CultureCaseStudy project={project} />;
   }
 
   return (
