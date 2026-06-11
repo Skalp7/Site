@@ -473,6 +473,110 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "melodigitale-festival",
+    title: "Melodigitale Festival",
+    category: "Festival Branding / Art Direction / Event Design",
+    year: "2024",
+    client: "Projet de fin d’études — École de Condé",
+    featured: false,
+    tier: "selected",
+    shortPitch:
+      "Direction artistique complète d’un festival fictif explorant la rencontre entre art digital, musique électronique et biodiversité urbaine.",
+    excerpt:
+      "Melodigitale imagine un festival marseillais où les nouvelles technologies deviennent un outil de sensibilisation environnementale à travers une identité visuelle inspirée de la plante Digitale et de la géométrie numérique.",
+    role: "Concept, direction artistique, identité événementielle, système graphique, affiches et supports de communication.",
+    tools: ["Illustrator", "Photoshop", "InDesign", "After Effects"],
+    services: ["Festival branding", "Art direction", "Event design", "Editorial communication"],
+    tone: {
+      name: "Digital Flora",
+      background: "from-[#0e1311] via-[#172d30] to-[#ad7f15]",
+      accent: "#ad7f15",
+    },
+    context:
+      "Projet de fin d’études réalisé à l’École de Condé autour des thèmes de l’art digital et de la refloraison des villes.",
+    objective:
+      "Créer une identité de festival capable de sensibiliser à l’environnement local tout en proposant une expérience culturelle immersive autour de la musique et du numérique.",
+    approach:
+      "Fusionner références végétales, géométrie numérique, musique électronique et langage événementiel dans un système visuel cohérent.",
+    solution:
+      "Une identité complète comprenant logo, système graphique, charte, affiches et supports événementiels.",
+    impact:
+      "Le projet démontre une capacité à développer une direction artistique globale mêlant narration, branding, événementiel et réflexion sociétale.",
+    metrics: [
+      { label: "Territoire", value: "Marseille" },
+      { label: "Écosystème", value: "Digital + vivant" },
+      { label: "Scope", value: "Festival complet" },
+    ],
+    deliverables: [
+      "Logo",
+      "Identité visuelle",
+      "Système graphique",
+      "Affiches",
+      "Charte graphique",
+      "Communication événementielle",
+      "Signalétique",
+      "Supports éditoriaux",
+      "Visuels promotionnels",
+    ],
+    sections: [
+      {
+        title: "Festival concept",
+        body: "Melodigitale réunit musique électronique, art numérique, installations interactives, conférences et sensibilisation écologique dans un même écosystème culturel marseillais.",
+      },
+      {
+        title: "Logo development",
+        body: "Le symbole naît de l’observation de la plante Digitale, progressivement déconstruite, géométrisée et compactée jusqu’à devenir une rencontre entre nature et esthétique technologique.",
+      },
+      {
+        title: "Grid system",
+        body: "Axes, proportions, guides et alignements rendent visible la logique de construction du symbole et transforment le logo en véritable système de marque.",
+      },
+      {
+        title: "Visual language",
+        body: "Formes géométriques végétales, yeux illustrés, fragments de feuilles et symboles de croissance composent un langage modulaire, rythmé et événementiel.",
+      },
+      {
+        title: "Color system",
+        body: "La palette #ad7f15, #99706e, #805052, #5f3835, #172d30 et #0e1311 oppose chaleur organique, profondeur végétale et précision numérique.",
+      },
+      {
+        title: "Event communication",
+        body: "Affiches, programme, signalétique, supports éditoriaux, réseaux sociaux et visuels promotionnels prolongent l’identité dans un système flexible et cohérent.",
+      },
+      {
+        title: "Festival experience",
+        body: "Concerts, galeries, conférences et parcours immersifs positionnent la technologie comme un outil de reconnexion sensible au vivant et à la biodiversité urbaine.",
+      },
+      {
+        title: "Final impact",
+        body: "Melodigitale démontre comment une direction artistique complète peut relier narration culturelle, identité événementielle, technologie et engagement environnemental.",
+      },
+    ],
+    gallery: [
+      {
+        id: "melodigitale-poster",
+        title: "Festival poster",
+        caption: "Une affiche manifeste entre géométrie numérique, musique et croissance végétale.",
+        aspect: "portrait",
+        tone: { name: "Digital flora", background: "from-[#0e1311] via-[#172d30] to-[#ad7f15]", accent: "#ad7f15" },
+      },
+      {
+        id: "melodigitale-system",
+        title: "Visual system",
+        caption: "Un langage modulaire inspiré par la plante Digitale et les rythmes électroniques.",
+        aspect: "landscape",
+        tone: { name: "Organic signal", background: "from-[#99706e] via-[#805052] to-[#172d30]", accent: "#99706e" },
+      },
+      {
+        id: "melodigitale-experience",
+        title: "Festival experience",
+        caption: "Une identité conçue pour vivre dans l’espace urbain et l’expérience événementielle.",
+        aspect: "wide",
+        tone: { name: "Urban regrowth", background: "from-[#172d30] via-[#5f3835] to-[#ad7f15]", accent: "#ad7f15" },
+      },
+    ],
+  },
+  {
     slug: "cercle-des-dauphins",
     title: "Cercle des Dauphins",
     category: "Editorial Design / Architectural Visual Identity / 3D",
@@ -542,63 +646,6 @@ export const projects: Project[] = [
         caption: "Des visuels de projection intégrés à la direction éditoriale.",
         aspect: "square",
         tone: { name: "3D atmosphere", background: "from-[#111827] via-[#4a6f84] to-[#d8d0be]", accent: "#4a6f84" },
-      },
-    ],
-  },
-  {
-    slug: "melodigital",
-    title: "MELODIGITAL",
-    category: "Conceptual Festival Branding / Graphic Design",
-    year: "2024",
-    client: "Projet personnel",
-    featured: false,
-    tier: "selected",
-    shortPitch: "Un festival fictif qui relie musique et sensibilisation aux plantes.",
-    excerpt:
-      "Création d’une charte graphique et préparation complète d’un univers festivalier conceptuel, entre identité, supports et narration visuelle.",
-    role: "Concept, charte graphique, direction visuelle et déclinaisons de festival.",
-    tools: ["Illustrator", "Photoshop", "InDesign"],
-    services: ["Concept branding", "Graphic design", "Festival identity"],
-    tone: {
-      name: "Botanic Sound",
-      background: "from-[#102015] via-[#3f7d3c] to-[#e7c657]",
-      accent: "#e7c657",
-    },
-    context:
-      "MELODIGITAL explore un territoire hybride : l’énergie musicale et la sensibilisation végétale, réunies dans une identité de festival fictif.",
-    objective:
-      "Créer une charte graphique suffisamment forte pour rendre le concept crédible et déclinable.",
-    approach:
-      "Le système joue sur les contrastes entre signal digital, formes organiques et codes de programmation culturelle.",
-    solution:
-      "L’identité structure un univers complet, prêt à être appliqué sur affiches, supports de communication et contenus événementiels.",
-    impact:
-      "Le projet montre une capacité à développer un concept créatif de bout en bout, avec une vraie cohérence visuelle.",
-    metrics: [
-      { label: "Nature", value: "Exploration" },
-      { label: "Univers", value: "Musique / plantes" },
-      { label: "Scope", value: "Charte complète" },
-    ],
-    deliverables: ["Charte graphique", "Affiches", "Supports festival", "Direction visuelle"],
-    sections: [
-      { title: "Concept", body: "Un festival fictif qui permet d’explorer une identité plus libre, tout en conservant une logique de marque structurée." },
-      { title: "Système", body: "La charte combine codes digitaux et formes végétales pour installer une signature mémorisable." },
-      { title: "Applications", body: "Les supports montrent comment le concept peut vivre dans un environnement événementiel complet." },
-    ],
-    gallery: [
-      {
-        id: "melodigital-poster",
-        title: "Festival poster",
-        caption: "Un territoire graphique entre rythme digital et formes organiques.",
-        aspect: "portrait",
-        tone: { name: "Plant sound", background: "from-[#102015] via-[#52a65a] to-[#f2d35b]", accent: "#52a65a" },
-      },
-      {
-        id: "melodigital-system",
-        title: "Visual system",
-        caption: "Une charte conceptuelle prête à être déclinée sur plusieurs supports.",
-        aspect: "landscape",
-        tone: { name: "Digital nature", background: "from-[#f4f0d8] via-[#6ab06c] to-[#14251b]", accent: "#6ab06c" },
       },
     ],
   },
