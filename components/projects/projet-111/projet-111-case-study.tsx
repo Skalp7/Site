@@ -42,6 +42,7 @@ const colors = [
 ];
 
 const alphabet = ["A", "M", "R", "S", "E", "I", "L", "L", "E"];
+const fullAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
 const systemPrinciples = [
   {
@@ -232,8 +233,11 @@ export function Projet111CaseStudy({ project }: Projet111CaseStudyProps) {
           />
           <div className="grid gap-5 lg:grid-cols-[1.25fr_0.75fr]">
             <GuidePanel dark className="grid min-h-[30rem] place-items-center p-8">
-              <div className="absolute left-8 top-8 h-px w-32 bg-[#0092CD]" />
-              <div className="absolute left-8 top-8 h-32 w-px bg-[#0092CD]" />
+              <div className="absolute inset-[12%] border border-[#0092CD]/55" />
+              <div className="absolute inset-x-[12%] top-1/2 h-px bg-[#0092CD]/35" />
+              <div className="absolute inset-y-[12%] left-1/2 w-px bg-[#0092CD]/35" />
+              <div className="absolute left-[12%] top-[8%] font-mono text-[9px] uppercase tracking-[0.22em] text-[#0092CD]">clear space / 1x</div>
+              <div className="absolute bottom-[8%] right-[12%] font-mono text-[9px] uppercase tracking-[0.22em] text-[#0092CD]">alignment axis</div>
               <Image
                 src={`${assetBase}/logo/projet111-logo-white.svg`}
                 alt="Logo principal Project 111"
@@ -242,7 +246,9 @@ export function Projet111CaseStudy({ project }: Projet111CaseStudyProps) {
                 unoptimized
                 className="h-auto w-full max-w-2xl"
               />
-              <p className="absolute bottom-6 left-8 font-mono text-[10px] uppercase tracking-[0.24em] text-white/45">Primary identity / white</p>
+              <div className="absolute left-[8%] top-[12%] h-px w-[4%] bg-white/55" />
+              <div className="absolute left-[12%] top-[8%] h-[4%] w-px bg-white/55" />
+              <p className="absolute bottom-6 left-8 font-mono text-[10px] uppercase tracking-[0.24em] text-white/45">Primary identity / construction field</p>
             </GuidePanel>
             <div className="grid gap-5">
               <GuidePanel className="grid min-h-56 place-items-center bg-white p-8">
@@ -326,6 +332,28 @@ export function Projet111CaseStudy({ project }: Projet111CaseStudyProps) {
             <div className="mt-8 grid border-y border-white/16 py-6 lg:grid-cols-[1fr_2fr]">
               <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-white/45">Alphabet specimen / scanned tape</p>
               <p className="mt-5 font-display text-5xl leading-none text-white sm:text-7xl lg:mt-0 lg:text-8xl">Marseille est multiple.</p>
+            </div>
+            <div className="relative mt-8 border-b border-white/16 pb-8">
+              <div className="absolute inset-x-0 top-1/2 h-px bg-[#0092CD]/50" />
+              <div className="absolute inset-x-0 top-[72%] h-px bg-[#C80E0B]/45" />
+              <div className="relative grid grid-cols-7 gap-2 sm:grid-cols-13">
+                {fullAlphabet.map((letter) => (
+                  <div key={letter} className="grid aspect-square place-items-center border border-white/10 bg-black p-2">
+                    <Image
+                      src={`${assetBase}/brand/${letter}.png`}
+                      alt={`Duct Tape Alphabet ${letter}`}
+                      width={120}
+                      height={140}
+                      unoptimized
+                      className="max-h-full w-auto object-contain invert"
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 flex justify-between font-mono text-[9px] uppercase tracking-[0.2em] text-white/40">
+                <span>cap height</span>
+                <span>baseline rhythm / 8 units</span>
+              </div>
             </div>
           </AnimatedReveal>
         </Container>
@@ -413,6 +441,73 @@ export function Projet111CaseStudy({ project }: Projet111CaseStudyProps) {
         </Container>
       </section>
 
+      <section className="border-b border-black/10 bg-white py-20 sm:py-28">
+        <Container className="space-y-14">
+          <SectionIntro
+            eyebrow="System anatomy / La Joliette"
+            title="Un quartier, quatre niveaux d’identification."
+            body="Chaque identité est construite comme une famille : le dos raconte, le cœur localise, le gabian crée la connivence et le label rattache l’ensemble à Project 111."
+          />
+          <div className="grid gap-4 lg:grid-cols-12 lg:grid-rows-[18rem_18rem]">
+            <AnimatedReveal variant="left" className="lg:col-span-6 lg:row-span-2">
+              <GuidePanel className="grid h-full min-h-[38rem] place-items-center bg-[#0092CD] p-8">
+                <Image
+                  src={`${assetBase}/back-designs/111-back-la-joliette.png`}
+                  alt="Système dos La Joliette"
+                  width={720}
+                  height={980}
+                  unoptimized
+                  className="max-h-[34rem] w-auto object-contain"
+                />
+                <p className="absolute bottom-5 left-5 font-mono text-[9px] uppercase tracking-[0.22em] text-white/65">01 / récit territorial</p>
+              </GuidePanel>
+            </AnimatedReveal>
+            <AnimatedReveal delay={0.05} className="lg:col-span-3">
+              <GuidePanel className="grid h-full min-h-64 place-items-center p-7">
+                <Image
+                  src={`${assetBase}/heart-designs/111-front-la-joliette.png`}
+                  alt="Système cœur La Joliette"
+                  width={420}
+                  height={360}
+                  unoptimized
+                  className="max-h-44 w-auto object-contain"
+                />
+                <p className="absolute bottom-4 left-4 font-mono text-[9px] uppercase tracking-[0.22em] text-black/45">02 / repère compact</p>
+              </GuidePanel>
+            </AnimatedReveal>
+            <AnimatedReveal delay={0.1} className="lg:col-span-3">
+              <GuidePanel className="grid h-full min-h-64 place-items-center bg-[#C80E0B] p-7">
+                <Image
+                  src={`${assetBase}/gabians/111-gabian-la-joliette.png`}
+                  alt="Gabian La Joliette"
+                  width={420}
+                  height={360}
+                  unoptimized
+                  className="max-h-44 w-auto object-contain"
+                />
+                <p className="absolute bottom-4 left-4 font-mono text-[9px] uppercase tracking-[0.22em] text-white/65">03 / symbole local</p>
+              </GuidePanel>
+            </AnimatedReveal>
+            <AnimatedReveal delay={0.15} className="lg:col-span-6">
+              <GuidePanel className="grid h-full min-h-64 grid-cols-[1fr_0.72fr] items-center bg-[#F2D909] p-8">
+                <div>
+                  <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-black/50">04 / signature commune</p>
+                  <p className="mt-4 max-w-xs font-display text-3xl leading-none">La différence locale appartient toujours à une collection commune.</p>
+                </div>
+                <Image
+                  src={`${assetBase}/labels/projet111-logo-yellow1.svg`}
+                  alt="Label Project 111"
+                  width={260}
+                  height={260}
+                  unoptimized
+                  className="h-auto w-full object-contain"
+                />
+              </GuidePanel>
+            </AnimatedReveal>
+          </div>
+        </Container>
+      </section>
+
       <section className="py-20 sm:py-28">
         <Container className="space-y-14">
           <SectionIntro
@@ -495,7 +590,14 @@ export function Projet111CaseStudy({ project }: Projet111CaseStudyProps) {
           />
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
             {neighborhoods.map((item, index) => (
-              <AnimatedReveal key={item.slug} delay={index * 0.04} className="grid min-h-72 place-items-center border border-white/20 bg-white p-5 text-[#111111]">
+              <AnimatedReveal
+                key={item.slug}
+                delay={index * 0.04}
+                className={[
+                  "grid min-h-72 place-items-center border border-white/20 bg-white p-5 text-[#111111]",
+                  index === 0 || index === 5 ? "lg:col-span-2" : "",
+                ].join(" ")}
+              >
                 <Image
                   src={`${assetBase}/gabians/111-gabian-${item.slug}.png`}
                   alt={`Gabian ${item.name}`}
@@ -531,11 +633,22 @@ export function Projet111CaseStudy({ project }: Projet111CaseStudyProps) {
             </div>
           </AnimatedReveal>
           <AnimatedReveal variant="right">
-            <GuidePanel className="grid min-h-[34rem] place-items-center bg-[#F2D909] p-10">
-              <div className="absolute left-[12%] top-[12%] h-px w-[32%] bg-black/35" />
-              <div className="absolute left-[12%] top-[12%] h-[32%] w-px bg-black/35" />
-              <Image src={`${assetBase}/logo/projet111-logo-black.svg`} alt="Signature Project 111" width={720} height={420} unoptimized className="h-auto w-full max-w-xl" />
-              <BadgeCheck className="absolute bottom-7 right-7 h-7 w-7" />
+            <GuidePanel className="grid min-h-[34rem] place-items-center bg-white p-6 sm:p-10">
+              <Image
+                src={`${assetBase}/mockups/111-mockup-soon-front-and-back.jpg`}
+                alt="Application du label Project 111"
+                width={1200}
+                height={760}
+                unoptimized
+                className="h-full min-h-[28rem] w-full object-cover"
+              />
+              <div className="absolute bottom-8 right-8 grid h-36 w-36 place-items-center border border-black/15 bg-[#F2D909] p-4 shadow-2xl">
+                <Image src={`${assetBase}/labels/projet111-logo-yellow1.svg`} alt="Label Project 111 jaune" width={180} height={180} unoptimized className="h-full w-full object-contain" />
+              </div>
+              <div className="absolute left-8 top-8 border-l border-t border-black/35 px-4 py-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/55">
+                placement / signature<br />collection constant
+              </div>
+              <BadgeCheck className="absolute bottom-8 left-8 h-7 w-7 text-[#003ACD]" />
             </GuidePanel>
           </AnimatedReveal>
         </Container>
@@ -548,6 +661,29 @@ export function Projet111CaseStudy({ project }: Projet111CaseStudyProps) {
             title="Le système quitte le guide et entre dans la ville."
             body="Les mockups testent la hiérarchie, l’échelle et la présence des identités dans un contexte réel. Ils montrent surtout qu’un même cadre peut accueillir des quartiers très différents."
           />
+          <AnimatedReveal className="relative min-h-[34rem] overflow-hidden bg-[#0092CD] p-5 sm:p-8 lg:min-h-[42rem]">
+            <div className="absolute inset-0 opacity-35 [background-image:linear-gradient(rgba(255,255,255,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.16)_1px,transparent_1px)] [background-size:42px_42px]" />
+            <Image
+              src={`${assetBase}/mockups/111-mockup-la-joliette-back.jpg`}
+              alt="Campagne La Joliette"
+              width={1200}
+              height={760}
+              unoptimized
+              className="absolute left-[4%] top-[9%] h-[58%] w-[68%] object-cover shadow-2xl"
+            />
+            <Image
+              src={`${assetBase}/mockups/111-mockup-notre-dame-du-mont-back.jpg`}
+              alt="Campagne Notre-Dame-du-Mont"
+              width={1000}
+              height={700}
+              unoptimized
+              className="absolute bottom-[8%] right-[4%] h-[48%] w-[55%] object-cover shadow-2xl"
+            />
+            <div className="absolute bottom-[8%] left-[4%] max-w-xs border-l border-white/55 pl-5 text-white">
+              <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-white/60">Application study / scale contrast</p>
+              <p className="mt-4 font-display text-3xl leading-none">La collection fonctionne comme une exposition mobile des quartiers.</p>
+            </div>
+          </AnimatedReveal>
           <div className="grid gap-5 lg:grid-cols-12">
             {neighborhoods.map((item, index) => (
               <AnimatedReveal

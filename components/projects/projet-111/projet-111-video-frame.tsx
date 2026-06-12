@@ -41,7 +41,7 @@ export function Projet111VideoFrame({ src, title, caption, className }: Projet11
               <div className="mx-auto grid h-16 w-16 place-items-center rounded-full border border-white/18 bg-white/10">
                 <Film className="h-7 w-7 text-white" />
               </div>
-              <p className="text-[11px] uppercase tracking-[0.28em] text-white/60">Placeholder vidéo</p>
+              <p className="text-[11px] uppercase tracking-[0.28em] text-white/60">Film de campagne indisponible</p>
             </div>
           </div>
         )}
