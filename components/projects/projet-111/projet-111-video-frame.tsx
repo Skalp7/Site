@@ -18,7 +18,7 @@ export function Projet111VideoFrame({ src, title, caption, className }: Projet11
   return (
     <figure
       className={cn(
-        "overflow-hidden rounded-[2rem] border border-black/10 bg-[#111827] text-white shadow-[0_26px_80px_rgba(10,15,20,0.22)]",
+        "overflow-hidden rounded-[0.5rem] border border-white/14 bg-[#111111] text-white shadow-[0_26px_80px_rgba(10,15,20,0.22)]",
         className,
       )}
     >
@@ -27,6 +27,10 @@ export function Projet111VideoFrame({ src, title, caption, className }: Projet11
           <video
             src={src}
             controls
+            autoPlay
+            muted
+            loop
+            playsInline
             preload="metadata"
             onError={() => setFailed(true)}
             className="h-full w-full bg-black object-cover"

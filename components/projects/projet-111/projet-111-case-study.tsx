@@ -1,11 +1,20 @@
-import { BadgeCheck, Map, MapPin, Shirt, Sparkles } from "lucide-react";
+import Image from "next/image";
+import {
+  BadgeCheck,
+  Boxes,
+  Map,
+  MapPin,
+  Ruler,
+  ScanLine,
+} from "lucide-react";
+import { ReactNode } from "react";
 
 import { ProjectMetadata } from "@/components/projects/project-metadata";
 import { Projet111AssetFrame } from "@/components/projects/projet-111/projet-111-asset-frame";
 import { Projet111VideoFrame } from "@/components/projects/projet-111/projet-111-video-frame";
+import { AnimatedReveal } from "@/components/ui/animated-reveal";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
-import { AnimatedReveal } from "@/components/ui/animated-reveal";
 import { Project } from "@/types";
 
 type Projet111CaseStudyProps = {
@@ -14,160 +23,175 @@ type Projet111CaseStudyProps = {
 
 const assetBase = "/projects/projet-111";
 
-const backDesigns = Array.from({ length: 6 }, (_, index) => ({
-  src: `${assetBase}/back-designs/back-design-0${index + 1}.jpg`,
-  label: `Back design 0${index + 1}`,
-  caption: "Sélection représentative du système dos : carte, quartier localisé, croquis et flèches directionnelles.",
-}));
-
-const heartDesigns = Array.from({ length: 4 }, (_, index) => ({
-  src: `${assetBase}/heart-designs/heart-arrondissement-0${index + 1}.jpg`,
-  label: `Arrondissement 0${index + 1}`,
-  caption: "Déclinaison cœur pensée comme repère d’appartenance territorial.",
-}));
-
-const gabians = Array.from({ length: 6 }, (_, index) => ({
-  src: `${assetBase}/gabians/gabian-0${index + 1}.jpg`,
-  label: `Gabian 0${index + 1}`,
-  caption: "Un détail local, symbole ou easter egg associé à un quartier.",
-}));
-
-const mockups = [
-  {
-    src: `${assetBase}/mockups/tshirt-front.jpg`,
-    label: "T-shirt front",
-    caption: "Lecture avant avec système cœur et posture produit.",
-    aspect: "portrait" as const,
-  },
-  {
-    src: `${assetBase}/mockups/tshirt-back.jpg`,
-    label: "T-shirt back",
-    caption: "Le dos comme visuel principal de la collection.",
-    aspect: "portrait" as const,
-  },
-  {
-    src: `${assetBase}/mockups/tshirt-detail-heart.jpg`,
-    label: "Heart detail",
-    caption: "Zoom sur le repère d’arrondissement.",
-    aspect: "square" as const,
-  },
-  {
-    src: `${assetBase}/mockups/tshirt-detail-label.jpg`,
-    label: "Label detail",
-    caption: "Le label 111 comme signature textile récurrente.",
-    aspect: "square" as const,
-  },
-  {
-    src: `${assetBase}/mockups/tshirt-worn.jpg`,
-    label: "Worn mockup",
-    caption: "Projection portée pour ancrer le projet dans un usage réel.",
-    aspect: "landscape" as const,
-  },
+const neighborhoods = [
+  { slug: "la-joliette", name: "La Joliette", color: "#0092CD" },
+  { slug: "notre-dame-du-mont", name: "Notre-Dame-du-Mont", color: "#C80E0B" },
+  { slug: "cinq-avenues", name: "Cinq-Avenues", color: "#003ACD" },
+  { slug: "mazargues", name: "Mazargues", color: "#CC6500" },
+  { slug: "sainte-anne", name: "Sainte-Anne", color: "#CEAA00" },
+  { slug: "soon", name: "Soon", color: "#F2D909" },
 ];
 
-const systemBlocks = [
+const colors = [
+  { name: "Blue Méditerranée", value: "#0092CD", note: "Mer et horizon marseillais" },
+  { name: "Bleu Profond", value: "#003ACD", note: "Identité et ancrage urbain" },
+  { name: "Rouge Canebière", value: "#C80E0B", note: "Passion du cœur marseillais" },
+  { name: "Orange Terre Cuite", value: "#CC6500", note: "Façades, matière et chaleur" },
+  { name: "Or Provençal", value: "#CEAA00", note: "Patrimoine et lumière" },
+  { name: "Jaune Soleil", value: "#F2D909", note: "Énergie méditerranéenne" },
+];
+
+const alphabet = ["A", "M", "R", "S", "E", "I", "L", "L", "E"];
+
+const systemPrinciples = [
   {
-    title: "111 visuels dos",
-    body: "Le dos porte la narration principale : carte de Marseille, croquis du quartier, repère géographique et trois flèches issues de la forme du chiffre 1.",
+    title: "Cartographier",
+    body: "La carte de Marseille relie chaque quartier à un territoire commun.",
     icon: Map,
   },
   {
-    title: "16 visuels cœur",
-    body: "Le cœur fonctionne comme un code territorial plus synthétique, décliné selon les 16 arrondissements.",
+    title: "Localiser",
+    body: "Chaque composition situe précisément le quartier dans la ville.",
     icon: MapPin,
   },
   {
-    title: "Label 111",
-    body: "Un détail textile placé en bas du t-shirt, conçu comme signature de collection et élément de cohérence.",
-    icon: BadgeCheck,
+    title: "Archiver",
+    body: "Architecture, symboles et détails locaux deviennent une mémoire visuelle.",
+    icon: ScanLine,
   },
   {
-    title: "111 gabians",
-    body: "Un système illustratif parallèle, plus local et narratif, qui ajoute une connivence propre à Marseille.",
-    icon: Sparkles,
+    title: "Décliner",
+    body: "Des règles fixes permettent de produire 111 identités uniques et cohérentes.",
+    icon: Boxes,
   },
-];
-
-const palette = [
-  { name: "Nouveau bleu OM", value: "#3e92cf" },
-  { name: "Bleu profond", value: "#223cd0" },
-  { name: "Rouge", value: "#b90000" },
-  { name: "Orange", value: "#be6400" },
-  { name: "Jaune doré", value: "#c7a900" },
 ];
 
 function SectionIntro({
   eyebrow,
   title,
   body,
+  light = false,
+  center = false,
 }: {
   eyebrow: string;
   title: string;
   body: string;
+  light?: boolean;
+  center?: boolean;
 }) {
   return (
-    <AnimatedReveal className="mx-auto grid max-w-5xl gap-4 text-center">
-      <p className="text-[11px] uppercase tracking-[0.34em] text-[#3e92cf]">{eyebrow}</p>
-      <h2 className="font-display text-4xl leading-none text-[#111827] sm:text-5xl lg:text-6xl">{title}</h2>
-      <p className="mx-auto max-w-3xl text-base leading-8 text-[#222]/70">{body}</p>
+    <AnimatedReveal className={center ? "mx-auto grid max-w-5xl gap-4 text-center" : "grid max-w-5xl gap-4"}>
+      <p className={light ? "text-[11px] uppercase tracking-[0.34em] text-white/60" : "text-[11px] uppercase tracking-[0.34em] text-[#003ACD]/65"}>
+        {eyebrow}
+      </p>
+      <h2 className={light ? "font-display text-4xl leading-none text-white sm:text-5xl lg:text-6xl" : "font-display text-4xl leading-none text-[#111111] sm:text-5xl lg:text-6xl"}>
+        {title}
+      </h2>
+      <p className={light ? "max-w-3xl text-base leading-8 text-white/68" : "max-w-3xl text-base leading-8 text-black/62"}>{body}</p>
     </AnimatedReveal>
+  );
+}
+
+function GuidePanel({
+  children,
+  className = "",
+  dark = false,
+}: {
+  children: ReactNode;
+  className?: string;
+  dark?: boolean;
+}) {
+  return (
+    <div
+      className={[
+        "relative overflow-hidden border",
+        dark ? "border-white/14 bg-white/[0.04]" : "border-black/12 bg-white",
+        "before:absolute before:inset-0 before:opacity-35 before:[background-image:linear-gradient(rgba(0,58,205,0.18)_1px,transparent_1px),linear-gradient(90deg,rgba(0,58,205,0.14)_1px,transparent_1px)] before:[background-size:36px_36px]",
+        className,
+      ].join(" ")}
+    >
+      <div className="relative">{children}</div>
+    </div>
+  );
+}
+
+function Specification({ number, title, body }: { number: string; title: string; body: string }) {
+  return (
+    <div className="grid grid-cols-[3.5rem_1fr] gap-4 border-t border-black/15 py-5">
+      <p className="font-mono text-xs text-[#003ACD]">{number}</p>
+      <div>
+        <h3 className="text-sm font-semibold uppercase tracking-[0.12em]">{title}</h3>
+        <p className="mt-2 text-sm leading-7 text-black/58">{body}</p>
+      </div>
+    </div>
   );
 }
 
 export function Projet111CaseStudy({ project }: Projet111CaseStudyProps) {
   return (
-    <article className="bg-[#f7f2e9] text-[#111827]">
-      <section className="relative overflow-hidden bg-[#fbf8f1] pb-20 pt-16">
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,24,39,0.06)_1px,transparent_1px),linear-gradient(0deg,rgba(17,24,39,0.05)_1px,transparent_1px)] bg-[size:44px_44px]" />
-        <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-[#f7f2e9] to-transparent" />
-        <Container className="relative grid min-h-[74vh] gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+    <article className="overflow-hidden bg-[#f4f1e9] text-[#111111]">
+      <section className="relative min-h-[calc(100vh-88px)] overflow-hidden bg-[#0092CD] pb-16 pt-16 text-white">
+        <div className="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(255,255,255,0.25)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.18)_1px,transparent_1px)] [background-size:44px_44px]" />
+        <div className="absolute -right-20 top-20 font-display text-[28rem] leading-none text-white/[0.08]">111</div>
+        <Container className="relative grid min-h-[75vh] gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <AnimatedReveal variant="left" className="space-y-8">
-            <div className="space-y-4">
-              <p className="text-[11px] uppercase tracking-[0.34em] text-[#223cd0]/70">{project.category}</p>
-              <h1 className="font-display text-6xl leading-none text-[#111827] sm:text-7xl lg:text-8xl">Projet 111</h1>
-              <p className="max-w-3xl text-2xl font-semibold leading-tight text-[#b90000] sm:text-3xl">
-                111 quartiers. 111 designs. Une cartographie graphique de Marseille.
+            <p className="text-[11px] uppercase tracking-[0.34em] text-white/65">{project.category}</p>
+            <div className="space-y-5">
+              <Image
+                src={`${assetBase}/logo/projet111-logo-white.svg`}
+                alt="Projet 111"
+                width={680}
+                height={300}
+                priority
+                unoptimized
+                className="h-auto w-full max-w-xl"
+              />
+              <p className="max-w-xl text-2xl font-semibold leading-tight sm:text-3xl">
+                Une ville entière traduite en système d’identité.
               </p>
             </div>
-            <p className="max-w-2xl text-base leading-8 text-[#222]/72">
-              Une collection textile pensée comme un système complet : dos cartographique, cœur par arrondissement, label de collection et gabians illustrés.
+            <p className="max-w-xl text-base leading-8 text-white/72">
+              111 quartiers, 16 arrondissements et une collection de récits locaux structurés par une seule grammaire visuelle.
             </p>
             <div className="flex flex-wrap gap-3">
-              <ButtonLink href="/projects" variant="secondary">Retour aux projets</ButtonLink>
-              <ButtonLink href="/contact">Discuter d’un projet textile</ButtonLink>
+              <ButtonLink href="/projects" variant="ghost">Retour aux projets</ButtonLink>
+              <ButtonLink href="/contact" variant="secondary" className="border-white/20 bg-white text-ink">
+                Discuter d’un système de marque
+              </ButtonLink>
             </div>
           </AnimatedReveal>
-
           <AnimatedReveal variant="panel" delay={0.08}>
             <Projet111AssetFrame
-              src={`${assetBase}/mockups/tshirt-back.jpg`}
-              alt="Projet 111 t-shirt back mockup"
-              label="Hero mockup"
-              caption="Le dos comme surface principale de narration territoriale."
-              aspect="portrait"
+              src={`${assetBase}/mockups/111-mockup-la-joliette-back.jpg`}
+              alt="T-shirt La Joliette, Project 111"
+              label="La Joliette / 02e arrondissement"
+              caption="Le vêtement est une application : le véritable projet est le système territorial qui le rend possible."
+              aspect="landscape"
+              className="border-white/18"
             />
           </AnimatedReveal>
         </Container>
       </section>
 
       <section className="py-20 sm:py-28">
-        <Container className="grid gap-10 lg:grid-cols-[1.05fr_0.65fr]">
-          <AnimatedReveal variant="left" className="space-y-8">
-            <div className="space-y-5">
-              <p className="text-[11px] uppercase tracking-[0.34em] text-[#3e92cf]">Project overview</p>
-              <h2 className="font-display text-4xl leading-none sm:text-5xl lg:text-6xl">
-                Une ville transformée en collection visuelle.
-              </h2>
-              <p className="max-w-3xl text-base leading-8 text-[#222]/70">{project.excerpt}</p>
-            </div>
-            <div className="grid gap-4 md:grid-cols-3">
+        <Container className="grid gap-12 lg:grid-cols-[1.1fr_0.65fr]">
+          <AnimatedReveal variant="left" className="space-y-10">
+            <SectionIntro
+              eyebrow="01 / Context"
+              title="Marseille n’est pas une identité. C’est une collection d’identités."
+              body={project.excerpt}
+            />
+            <div className="grid gap-4 sm:grid-cols-3">
               {project.metrics.map((metric) => (
-                <div key={metric.label} className="rounded-[1.5rem] border border-black/10 bg-white/70 p-5">
-                  <p className="text-[11px] uppercase tracking-[0.28em] text-[#223cd0]/65">{metric.label}</p>
-                  <p className="mt-4 font-display text-4xl">{metric.value}</p>
+                <div key={metric.label} className="border-t-2 border-[#003ACD] pt-4">
+                  <p className="text-[10px] uppercase tracking-[0.28em] text-black/45">{metric.label}</p>
+                  <p className="mt-3 font-display text-4xl">{metric.value}</p>
                 </div>
               ))}
             </div>
+            <p className="max-w-4xl font-display text-3xl leading-tight text-[#C80E0B] sm:text-4xl">
+              Project 111 transforme les histoires locales, l’architecture et la cartographie en objets graphiques capables de former une archive culturelle cohérente.
+            </p>
           </AnimatedReveal>
           <AnimatedReveal variant="right">
             <ProjectMetadata project={project} />
@@ -176,79 +200,213 @@ export function Projet111CaseStudy({ project }: Projet111CaseStudyProps) {
       </section>
 
       <section className="border-y border-black/10 bg-white py-20 sm:py-28">
-        <Container className="space-y-12">
+        <Container className="space-y-14">
           <SectionIntro
-            eyebrow="Brand / collection system"
-            title="Un système textile, pas une galerie d’illustrations."
-            body="Projet 111 repose sur des règles précises : un dos principal en 111 déclinaisons, un cœur en 16 déclinaisons, un label récurrent, une série de gabians et une charte pensée pour l’impression textile."
+            eyebrow="02 / Concept"
+            title="Une grammaire commune. Cent onze récits différents."
+            body="L’ambition est de préserver les histoires de quartier sans les uniformiser. Chaque identité conserve ses singularités tout en appartenant immédiatement à Project 111."
+            center
           />
-          <div className="grid gap-4 lg:grid-cols-4">
-            {systemBlocks.map((block, index) => {
-              const Icon = block.icon;
+          <div className="grid gap-5 lg:grid-cols-4">
+            {systemPrinciples.map((item, index) => {
+              const Icon = item.icon;
               return (
-                <AnimatedReveal key={block.title} delay={index * 0.05} variant="panel">
-                  <div className="h-full rounded-[1.5rem] border border-black/10 bg-[#f7f2e9] p-5">
-                    <Icon className="h-6 w-6 text-[#b90000]" />
-                    <h3 className="mt-5 font-display text-3xl">{block.title}</h3>
-                    <p className="mt-4 text-sm leading-7 text-[#222]/68">{block.body}</p>
-                  </div>
+                <AnimatedReveal key={item.title} delay={index * 0.06} className="border-t border-black/18 py-6">
+                  <Icon className="h-6 w-6 text-[#C80E0B]" />
+                  <p className="mt-10 font-display text-3xl">{item.title}</p>
+                  <p className="mt-3 text-sm leading-7 text-black/58">{item.body}</p>
                 </AnimatedReveal>
               );
             })}
           </div>
-          <AnimatedReveal variant="rise">
-            <Projet111AssetFrame
-              src={`${assetBase}/brand/projet-111-system.jpg`}
-              alt="Projet 111 graphic system"
-              label="System overview"
-              caption="Une vue synthétique du langage de collection : dos, cœur, label, gabians, couleurs et règles de déclinaison."
-              aspect="wide"
-            />
-          </AnimatedReveal>
         </Container>
       </section>
 
-      <section className="py-20 sm:py-28">
-        <Container className="space-y-12">
+      <section className="bg-[#111111] py-20 text-white sm:py-28">
+        <Container className="space-y-14">
           <SectionIntro
-            eyebrow="Back design system"
-            title="Le dos comme carte, récit et signature graphique."
-            body="Chaque design comprend une carte de Marseille, des croquis de monuments ou constructions du quartier, le quartier positionné sur la carte et trois flèches issues de la forme du chiffre 1."
+            eyebrow="03 / Logo system"
+            title="Un signe compact pour représenter une ville plurielle."
+            body="Le logotype existe comme marque principale, signature monochrome et label coloré. Sa construction volontairement brute relie système, matière et culture urbaine."
+            light
           />
-          <div className="grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
-            <AnimatedReveal variant="left">
-              <Projet111AssetFrame
-                src={`${assetBase}/back-designs/back-design-01.jpg`}
-                alt="Projet 111 main back design"
-                label="Main back system"
-                caption="Les trois flèches transforment le chiffre 1 en outil directionnel : repérage, signature et lien direct avec le nom 111."
-                aspect="portrait"
+          <div className="grid gap-5 lg:grid-cols-[1.25fr_0.75fr]">
+            <GuidePanel dark className="grid min-h-[30rem] place-items-center p-8">
+              <div className="absolute left-8 top-8 h-px w-32 bg-[#0092CD]" />
+              <div className="absolute left-8 top-8 h-32 w-px bg-[#0092CD]" />
+              <Image
+                src={`${assetBase}/logo/projet111-logo-white.svg`}
+                alt="Logo principal Project 111"
+                width={760}
+                height={420}
+                unoptimized
+                className="h-auto w-full max-w-2xl"
               />
-            </AnimatedReveal>
-            <div className="grid gap-5 sm:grid-cols-2">
-              {backDesigns.slice(1).map((asset, index) => (
-                <AnimatedReveal key={asset.label} delay={index * 0.04} variant="panel">
-                  <Projet111AssetFrame src={asset.src} alt={asset.label} label={asset.label} caption={asset.caption} aspect="square" />
-                </AnimatedReveal>
-              ))}
+              <p className="absolute bottom-6 left-8 font-mono text-[10px] uppercase tracking-[0.24em] text-white/45">Primary identity / white</p>
+            </GuidePanel>
+            <div className="grid gap-5">
+              <GuidePanel className="grid min-h-56 place-items-center bg-white p-8">
+                <Image src={`${assetBase}/logo/projet111-logo-black.svg`} alt="Logo noir Project 111" width={480} height={260} unoptimized className="h-auto w-full max-w-sm" />
+              </GuidePanel>
+              <div className="grid grid-cols-3 gap-3">
+                {["blue1", "red", "yellow1"].map((color) => (
+                  <div key={color} className="grid aspect-square place-items-center border border-white/14 bg-white/[0.05] p-4">
+                    <Image
+                      src={`${assetBase}/labels/projet111-logo-${color}.svg`}
+                      alt={`Label Project 111 ${color}`}
+                      width={220}
+                      height={220}
+                      unoptimized
+                      className="h-full w-full object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </Container>
       </section>
 
-      <section className="bg-[#111827] py-20 text-white sm:py-28">
-        <Container className="space-y-12">
-          <AnimatedReveal className="mx-auto grid max-w-5xl gap-4 text-center">
-            <p className="text-[11px] uppercase tracking-[0.34em] text-[#c7a900]">Heart design system</p>
-            <h2 className="font-display text-4xl leading-none sm:text-5xl lg:text-6xl">16 cœurs pour les 16 arrondissements.</h2>
-            <p className="mx-auto max-w-3xl text-base leading-8 text-white/66">
-              Le cœur agit comme un système secondaire : plus compact, plus immédiat, il indique l’arrondissement et donne au t-shirt un repère d’appartenance.
-            </p>
+      <section className="py-20 sm:py-28">
+        <Container className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
+          <AnimatedReveal variant="left" className="space-y-6">
+            <SectionIntro
+              eyebrow="04 / Grid system"
+              title="Le système doit rester lisible avant de devenir expressif."
+              body="La construction relie cartographie, repère de quartier, architecture, flèches et typographie dans un format stable. La variation intervient à l’intérieur de règles mesurables."
+            />
+            <div>
+              <Specification number="01" title="Cadre territorial" body="La carte fournit la structure commune à chaque composition." />
+              <Specification number="02" title="Zone narrative" body="Les croquis locaux racontent le quartier sans masquer sa position." />
+              <Specification number="03" title="Signal 111" body="Trois flèches issues du chiffre 1 organisent direction et rythme." />
+            </div>
           </AnimatedReveal>
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {heartDesigns.map((asset, index) => (
-              <AnimatedReveal key={asset.label} delay={index * 0.05} variant="panel">
-                <Projet111AssetFrame src={asset.src} alt={asset.label} label={asset.label} caption={asset.caption} aspect="square" />
+          <AnimatedReveal variant="right">
+            <GuidePanel className="grid min-h-[38rem] place-items-center bg-[#003ACD] p-8">
+              <div className="absolute inset-[10%] border border-white/30" />
+              <div className="absolute inset-x-[10%] top-1/3 h-px bg-white/30" />
+              <div className="absolute inset-y-[10%] left-1/3 w-px bg-white/30" />
+              <div className="absolute inset-y-[10%] right-1/3 w-px bg-white/30" />
+              <Image
+                src={`${assetBase}/back-designs/111-back-cinq-avenues.png`}
+                alt="Construction du back design Cinq-Avenues"
+                width={720}
+                height={980}
+                unoptimized
+                className="relative max-h-[32rem] w-auto object-contain"
+              />
+              <Ruler className="absolute bottom-6 right-6 h-6 w-6 text-white/60" />
+            </GuidePanel>
+          </AnimatedReveal>
+        </Container>
+      </section>
+
+      <section className="bg-white py-20 sm:py-28">
+        <Container className="space-y-14">
+          <SectionIntro
+            eyebrow="05 / Typography"
+            title="Duct Tape Alphabet : une typographie fabriquée, scannée, imparfaite."
+            body="L’alphabet n’imite pas une texture urbaine. Il porte réellement la trace de sa fabrication. Cette matière analogique donne au système sa voix populaire et directe."
+          />
+          <AnimatedReveal className="overflow-hidden bg-[#111111] px-3 py-8 sm:px-6">
+            <div className="grid grid-cols-3 gap-2 sm:grid-cols-5 lg:grid-cols-9">
+              {alphabet.map((letter, index) => (
+                <div key={`${letter}-${index}`} className="grid aspect-[3/4] place-items-center border border-white/12 bg-white/[0.03] p-2">
+                  <Image
+                    src={`${assetBase}/brand/${letter}.png`}
+                    alt={`Duct Tape Alphabet ${letter}`}
+                    width={220}
+                    height={300}
+                    unoptimized
+                    className="max-h-full w-auto object-contain invert"
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 grid border-y border-white/16 py-6 lg:grid-cols-[1fr_2fr]">
+              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-white/45">Alphabet specimen / scanned tape</p>
+              <p className="mt-5 font-display text-5xl leading-none text-white sm:text-7xl lg:mt-0 lg:text-8xl">Marseille est multiple.</p>
+            </div>
+          </AnimatedReveal>
+        </Container>
+      </section>
+
+      <section className="py-20 sm:py-28">
+        <Container className="space-y-14">
+          <SectionIntro
+            eyebrow="06 / Color system"
+            title="Six couleurs pour raconter Marseille sans la réduire."
+            body="La palette puise dans la mer, les rues, les terres cuites, la lumière et les signes populaires. Chaque teinte fonctionne seule, mais gagne en force comme partie d’un système."
+          />
+          <div className="grid lg:grid-cols-6">
+            {colors.map((color, index) => (
+              <AnimatedReveal
+                key={color.value}
+                delay={index * 0.04}
+                className="relative isolate flex min-h-[23rem] flex-col justify-between p-5 text-white"
+              >
+                <div className="absolute inset-0 -z-10" style={{ backgroundColor: color.value }} />
+                <p className="font-mono text-xs uppercase">{color.value}</p>
+                <div>
+                  <p className="font-display text-3xl leading-none">{color.name}</p>
+                  <p className="mt-3 text-xs leading-5 text-white/70">{color.note}</p>
+                </div>
+              </AnimatedReveal>
+            ))}
+          </div>
+          <div className="grid gap-5 lg:grid-cols-2">
+            <Projet111AssetFrame
+              src={`${assetBase}/brand/projet111-colors-1-2-3.jpg`}
+              alt="Palette Project 111, couleurs 1 à 3"
+              label="Mediterranean / Deep / Canebière"
+              caption="Les couleurs sont documentées comme des composantes culturelles, pas comme de simples swatches."
+              aspect="landscape"
+            />
+            <Projet111AssetFrame
+              src={`${assetBase}/brand/projet111-colors-4-5-6.jpg`}
+              alt="Palette Project 111, couleurs 4 à 6"
+              label="Terracotta / Provençal / Soleil"
+              caption="Une seconde famille plus chaude traduit matière, patrimoine et lumière."
+              aspect="landscape"
+            />
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-[#003ACD] py-20 text-white sm:py-28">
+        <Container className="space-y-14">
+          <SectionIntro
+            eyebrow="07 / Graphic language"
+            title="La flèche, la carte et le repère deviennent une syntaxe."
+            body="Le langage graphique articule direction, localisation et mouvement. Les signes issus du chiffre 1 structurent la page, indiquent un territoire et relient chaque identité au système principal."
+            light
+          />
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[1, 2, 3, 4].map((sign, index) => (
+              <AnimatedReveal key={sign} delay={index * 0.05}>
+                <GuidePanel dark className="grid aspect-square place-items-center p-10">
+                  <Image
+                    src={`${assetBase}/brand/sign${sign}.png`}
+                    alt={`Signe directionnel ${sign}`}
+                    width={320}
+                    height={420}
+                    unoptimized
+                    className="max-h-full w-auto object-contain invert"
+                  />
+                </GuidePanel>
+              </AnimatedReveal>
+            ))}
+          </div>
+          <div className="grid gap-5 border-t border-white/20 pt-7 lg:grid-cols-3">
+            {[
+              ["Direction", "Les trois 1 deviennent des flèches et organisent la lecture."],
+              ["Localisation", "La carte situe le quartier avant même d’en raconter les détails."],
+              ["Cohérence", "Une même syntaxe permet aux 111 récits de coexister."],
+            ].map(([title, body], index) => (
+              <AnimatedReveal key={title} delay={index * 0.06}>
+                <p className="font-mono text-[10px] text-white/45">0{index + 1}</p>
+                <h3 className="mt-4 font-display text-3xl">{title}</h3>
+                <p className="mt-3 text-sm leading-7 text-white/62">{body}</p>
               </AnimatedReveal>
             ))}
           </div>
@@ -256,142 +414,209 @@ export function Projet111CaseStudy({ project }: Projet111CaseStudyProps) {
       </section>
 
       <section className="py-20 sm:py-28">
-        <Container className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-          <AnimatedReveal variant="left" className="space-y-5">
-            <p className="text-[11px] uppercase tracking-[0.34em] text-[#3e92cf]">Label 111</p>
-            <h2 className="font-display text-4xl leading-none sm:text-5xl">Un détail textile qui signe toute la collection.</h2>
-            <p className="text-base leading-8 text-[#222]/70">
-              Placé en bas du t-shirt, le label 111 fonctionne comme un élément de marque récurrent. Il relie chaque quartier à une collection commune et donne au projet une logique produit.
-            </p>
+        <Container className="space-y-14">
+          <SectionIntro
+            eyebrow="08 / Back design system"
+            title="Le cœur du projet : 111 quartiers, 111 compositions."
+            body="Chaque dos combine carte, architecture, localisation et signal directionnel. L’enjeu n’est pas de produire une série homogène, mais une collection capable d’accueillir la différence."
+          />
+          <div className="grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
+            <AnimatedReveal variant="left">
+              <Projet111AssetFrame
+                src={`${assetBase}/back-designs/111-back-la-joliette.png`}
+                alt="Back design La Joliette"
+                label="Hero identity / La Joliette"
+                caption="Une identité locale construite à partir de l’architecture portuaire et de sa position dans Marseille."
+                aspect="portrait"
+                contain
+              />
+            </AnimatedReveal>
+            <div className="grid gap-5 sm:grid-cols-2">
+              {neighborhoods.slice(1, 5).map((item, index) => (
+                <AnimatedReveal key={item.slug} delay={index * 0.05}>
+                  <Projet111AssetFrame
+                    src={`${assetBase}/back-designs/111-back-${item.slug}.png`}
+                    alt={`Back design ${item.name}`}
+                    label={item.name}
+                    caption="Même grille, architecture différente, récit singulier."
+                    aspect="portrait"
+                    contain
+                  />
+                </AnimatedReveal>
+              ))}
+            </div>
+          </div>
+          <AnimatedReveal className="grid gap-px bg-black/12 sm:grid-cols-3 lg:grid-cols-6">
+            {neighborhoods.map((item, index) => (
+              <div key={item.slug} className="bg-white p-5">
+                <p className="font-mono text-[10px] text-black/40">0{index + 1} / 111</p>
+                <p className="mt-10 font-display text-2xl">{item.name}</p>
+                <div className="mt-4 h-1 w-full" style={{ backgroundColor: item.color }} />
+              </div>
+            ))}
+          </AnimatedReveal>
+        </Container>
+      </section>
+
+      <section className="bg-white py-20 sm:py-28">
+        <Container className="space-y-14">
+          <SectionIntro
+            eyebrow="09 / Arrondissement system"
+            title="Seize repères secondaires pour une lecture immédiate."
+            body="Les designs cœur constituent le niveau compact du système. Ils indiquent l’arrondissement, créent l’appartenance et permettent une identification rapide sans répéter le récit complet du dos."
+          />
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {neighborhoods.map((item, index) => (
+              <AnimatedReveal key={item.slug} delay={index * 0.04}>
+                <GuidePanel className="grid aspect-[4/3] place-items-center p-8">
+                  <Image
+                    src={`${assetBase}/heart-designs/111-front-${item.slug}.png`}
+                    alt={`Système cœur ${item.name}`}
+                    width={480}
+                    height={360}
+                    unoptimized
+                    className="max-h-full w-auto object-contain"
+                  />
+                  <p className="absolute bottom-4 left-5 text-[10px] uppercase tracking-[0.22em] text-black/45">{item.name}</p>
+                </GuidePanel>
+              </AnimatedReveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-[#C80E0B] py-20 text-white sm:py-28">
+        <Container className="space-y-14">
+          <SectionIntro
+            eyebrow="10 / Gabian system"
+            title="Des symboles de quartier à collectionner."
+            body="Les gabians ajoutent une couche de connivence. Chaque personnage cache une référence locale, un easter egg ou un détail culturel qui récompense celles et ceux qui connaissent Marseille."
+            light
+          />
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
+            {neighborhoods.map((item, index) => (
+              <AnimatedReveal key={item.slug} delay={index * 0.04} className="grid min-h-72 place-items-center border border-white/20 bg-white p-5 text-[#111111]">
+                <Image
+                  src={`${assetBase}/gabians/111-gabian-${item.slug}.png`}
+                  alt={`Gabian ${item.name}`}
+                  width={360}
+                  height={360}
+                  unoptimized
+                  className="max-h-44 w-auto object-contain"
+                />
+                <p className="mt-5 text-center text-[10px] uppercase tracking-[0.2em]">{item.name}</p>
+              </AnimatedReveal>
+            ))}
+          </div>
+          <p className="max-w-4xl font-display text-3xl leading-tight text-white/90 sm:text-5xl">
+            Un système d’identité devient culturel quand il laisse de la place aux détails que seuls les habitants reconnaissent.
+          </p>
+        </Container>
+      </section>
+
+      <section className="py-20 sm:py-28">
+        <Container className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:items-center">
+          <AnimatedReveal variant="left" className="space-y-6">
+            <SectionIntro
+              eyebrow="11 / Label system"
+              title="La signature relie chaque quartier à la collection."
+              body="Le label n’est pas un détail décoratif. Il est le point commun stable, la preuve d’appartenance au système Project 111 et le lien entre identité territoriale et objet produit."
+            />
+            <div className="grid grid-cols-3 gap-3">
+              {["blue2", "orange", "yellow2", "red", "blue1", "yellow1"].map((color) => (
+                <div key={color} className="grid aspect-square place-items-center border border-black/12 bg-white p-3">
+                  <Image src={`${assetBase}/labels/projet111-logo-${color}.svg`} alt={`Label ${color}`} width={200} height={200} unoptimized className="h-full w-full object-contain" />
+                </div>
+              ))}
+            </div>
           </AnimatedReveal>
           <AnimatedReveal variant="right">
-            <Projet111AssetFrame
-              src={`${assetBase}/logo/projet-111-label.svg`}
-              alt="Projet 111 label"
-              label="Collection label"
-              caption="Un label simple, textile, répétable, conçu comme signature de collection."
-              aspect="landscape"
-              contain
-            />
+            <GuidePanel className="grid min-h-[34rem] place-items-center bg-[#F2D909] p-10">
+              <div className="absolute left-[12%] top-[12%] h-px w-[32%] bg-black/35" />
+              <div className="absolute left-[12%] top-[12%] h-[32%] w-px bg-black/35" />
+              <Image src={`${assetBase}/logo/projet111-logo-black.svg`} alt="Signature Project 111" width={720} height={420} unoptimized className="h-auto w-full max-w-xl" />
+              <BadgeCheck className="absolute bottom-7 right-7 h-7 w-7" />
+            </GuidePanel>
           </AnimatedReveal>
         </Container>
       </section>
 
       <section className="border-y border-black/10 bg-white py-20 sm:py-28">
-        <Container className="space-y-12">
+        <Container className="space-y-14">
           <SectionIntro
-            eyebrow="Gabian series"
-            title="111 gabians comme détails locaux, symboles et easter eggs."
-            body="Chaque quartier possède aussi son gabian : un système illustratif parallèle, plus narratif, qui ajoute une connivence marseillaise à la collection."
+            eyebrow="12 / Applications"
+            title="Le système quitte le guide et entre dans la ville."
+            body="Les mockups testent la hiérarchie, l’échelle et la présence des identités dans un contexte réel. Ils montrent surtout qu’un même cadre peut accueillir des quartiers très différents."
           />
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {gabians.map((asset, index) => (
-              <AnimatedReveal key={asset.label} delay={index * 0.04} variant="panel">
-                <Projet111AssetFrame src={asset.src} alt={asset.label} label={asset.label} caption={asset.caption} aspect="square" />
+          <div className="grid gap-5 lg:grid-cols-12">
+            {neighborhoods.map((item, index) => (
+              <AnimatedReveal
+                key={item.slug}
+                delay={index * 0.04}
+                className={index === 0 || index === 5 ? "lg:col-span-8" : "lg:col-span-4"}
+              >
+                <Projet111AssetFrame
+                  src={`${assetBase}/mockups/111-mockup-${item.slug}${item.slug === "soon" ? "-front-and-back" : "-back"}.jpg`}
+                  alt={`Application ${item.name}`}
+                  label={item.name}
+                  caption="Le vêtement devient support de mémoire territoriale."
+                  aspect="landscape"
+                />
               </AnimatedReveal>
             ))}
           </div>
         </Container>
       </section>
 
-      <section className="py-20 sm:py-28">
-        <Container className="space-y-12">
+      <section className="bg-[#111111] py-20 text-white sm:py-28">
+        <Container className="space-y-14">
           <SectionIntro
-            eyebrow="Typography & color system"
-            title="Une typographie brute et une palette unie, pensée pour le textile."
-            body="Duct Tape Alphabet Font Scan apporte une énergie populaire, urbaine et spontanée. La palette reste simple, directe et imprimable, sur base t-shirt blanc et impression DTF."
+            eyebrow="13 / Campaign"
+            title="Une campagne pour révéler le système, pas seulement la collection."
+            body="Les films de lancement mettent en mouvement les quartiers, les détails graphiques, les gabians et les objets. Le rythme donne à voir l’échelle du projet et sa capacité à fédérer."
+            light
+            center
           />
-          <div className="grid gap-5 lg:grid-cols-[1fr_1fr]">
-            <AnimatedReveal variant="left">
-              <Projet111AssetFrame
-                src={`${assetBase}/brand/projet-111-typography.jpg`}
-                alt="Projet 111 typography"
-                label="Duct Tape Alphabet Font Scan"
-                caption="Une typographie brute, expressive et cohérente avec l’énergie de Marseille."
-                aspect="landscape"
-              />
-            </AnimatedReveal>
-            <AnimatedReveal variant="right" className="rounded-[2rem] border border-black/10 bg-white p-6">
-              <p className="text-[11px] uppercase tracking-[0.28em] text-[#223cd0]/65">Palette textile</p>
-              <div className="mt-6 grid gap-3">
-                {palette.map((color) => (
-                  <div key={color.value} className="flex items-center justify-between gap-4 border-b border-black/10 pb-3 last:border-none last:pb-0">
-                    <div className="flex items-center gap-3">
-                      <span className="h-10 w-10 rounded-full border border-black/10" style={{ backgroundColor: color.value }} />
-                      <span className="text-sm font-medium">{color.name}</span>
-                    </div>
-                    <span className="text-xs uppercase tracking-[0.18em] text-[#222]/54">{color.value}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-6 text-sm leading-7 text-[#222]/64">
-                Le système privilégie des aplats francs pour conserver lisibilité, impact visuel et faisabilité en impression DTF.
-              </p>
-            </AnimatedReveal>
-          </div>
-        </Container>
-      </section>
-
-      <section className="bg-[#fdfaf2] py-20 sm:py-28">
-        <Container className="space-y-12">
-          <SectionIntro
-            eyebrow="Mockups & textile applications"
-            title="Une collection pensée comme marque textile, pas comme simple exercice graphique."
-            body="Les mockups permettent de vérifier les placements, la lisibilité du dos, l’échelle du cœur, la présence du label et la cohérence produit."
-          />
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {mockups.map((asset, index) => (
-              <AnimatedReveal key={asset.label} delay={index * 0.04} variant="panel" className={index === 4 ? "lg:col-span-2" : undefined}>
-                <Projet111AssetFrame src={asset.src} alt={asset.label} label={asset.label} caption={asset.caption} aspect={asset.aspect} />
-              </AnimatedReveal>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className="bg-[#111827] py-20 text-white sm:py-28">
-        <Container className="space-y-12">
-          <AnimatedReveal className="mx-auto grid max-w-5xl gap-4 text-center">
-            <p className="text-[11px] uppercase tracking-[0.34em] text-[#c7a900]">Promotional videos</p>
-            <h2 className="font-display text-4xl leading-none sm:text-5xl lg:text-6xl">Deux emplacements vidéo pour présenter la collection en mouvement.</h2>
-            <p className="mx-auto max-w-3xl text-base leading-8 text-white/66">
-              Les vidéos doivent pouvoir montrer la logique de collection, les détails textile, les variantes et l’énergie urbaine du projet.
-            </p>
-          </AnimatedReveal>
-          <div className="grid gap-5 lg:grid-cols-2">
+          <div className="grid gap-6 lg:grid-cols-2">
             <AnimatedReveal variant="left">
               <Projet111VideoFrame
-                src={`${assetBase}/videos/projet-111-promo-01.mp4`}
-                title="promo-video-01"
-                caption="Vidéo de présentation générale : concept, collection, système dos et mockups."
+                src={`${assetBase}/videos/111-brand-film.mp4`}
+                title="Brand film"
+                caption="Le film de marque expose le langage visuel, les principes de collection et les récits locaux."
               />
             </AnimatedReveal>
             <AnimatedReveal variant="right">
               <Projet111VideoFrame
-                src={`${assetBase}/videos/projet-111-promo-02.mp4`}
-                title="promo-video-02"
-                caption="Vidéo plus rythmée pour social media : détails, gabians, cœur et identité textile."
+                src={`${assetBase}/videos/111-launch-film.mp4`}
+                title="Launch film"
+                caption="Le film de lancement transforme le système en énergie de campagne."
               />
             </AnimatedReveal>
           </div>
         </Container>
       </section>
 
-      <section className="py-20 sm:py-28">
-        <Container>
-          <AnimatedReveal variant="panel">
-            <div className="rounded-[2rem] border border-black/10 bg-white p-8 text-center shadow-[0_26px_80px_rgba(10,15,20,0.12)] lg:p-12">
-              <Shirt className="mx-auto h-8 w-8 text-[#b90000]" />
-              <p className="mt-6 text-[11px] uppercase tracking-[0.34em] text-[#223cd0]/65">Final impact</p>
-              <h2 className="mx-auto mt-5 max-w-5xl font-display text-4xl leading-none sm:text-5xl lg:text-6xl">
-                Un système culturel capable de transformer Marseille en marque textile.
-              </h2>
-              <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-[#222]/68">
-                Projet 111 démontre une capacité à penser une collection à grande échelle, à structurer une identité déclinable et à faire dialoguer cartographie, illustration, culture populaire et design textile.
-              </p>
-              <div className="mt-8 flex justify-center">
-                <ButtonLink href="/projects" variant="secondary">Voir les autres projets</ButtonLink>
-              </div>
+      <section className="relative overflow-hidden bg-[#0092CD] py-24 text-white sm:py-32">
+        <div className="absolute inset-0 opacity-25 [background-image:linear-gradient(rgba(255,255,255,0.24)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.18)_1px,transparent_1px)] [background-size:44px_44px]" />
+        <Container className="relative grid gap-12 lg:grid-cols-[0.68fr_1.32fr] lg:items-end">
+          <AnimatedReveal variant="left" className="space-y-5">
+            <p className="text-[11px] uppercase tracking-[0.34em] text-white/60">14 / Final impact</p>
+            <div className="grid grid-cols-3 gap-3">
+              <div className="border-t border-white/40 pt-4"><p className="font-display text-5xl">111</p><p className="mt-2 text-xs text-white/65">quartiers</p></div>
+              <div className="border-t border-white/40 pt-4"><p className="font-display text-5xl">16</p><p className="mt-2 text-xs text-white/65">arrondissements</p></div>
+              <div className="border-t border-white/40 pt-4"><p className="font-display text-5xl">1</p><p className="mt-2 text-xs text-white/65">système</p></div>
+            </div>
+          </AnimatedReveal>
+          <AnimatedReveal variant="right" className="space-y-7">
+            <h2 className="font-display text-5xl leading-none sm:text-6xl lg:text-8xl">
+              Une archive culturelle capable de représenter une ville entière.
+            </h2>
+            <p className="max-w-3xl text-base leading-8 text-white/72">{project.impact}</p>
+            <div className="flex flex-wrap gap-3">
+              <ButtonLink href="/projects" variant="ghost">Voir les autres projets</ButtonLink>
+              <ButtonLink href="/contact" variant="secondary" className="border-white/20 bg-white text-ink">
+                Construire un système d’identité
+              </ButtonLink>
             </div>
           </AnimatedReveal>
         </Container>

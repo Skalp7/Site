@@ -88,17 +88,17 @@ export const projects: Project[] = [
   {
     slug: "projet-111",
     title: "Projet 111",
-    category: "Textile Design / Cultural Branding / Illustration",
+    category: "Cultural Branding / Identity System / Art Direction",
     year: "2025",
     client: "Projet personnel",
     featured: true,
     tier: "featured",
-    shortPitch: "111 quartiers. 111 designs. Une collection textile pensée comme une cartographie graphique de Marseille.",
+    shortPitch: "111 quartiers. 16 arrondissements. Un système d’identité capable de traduire Marseille en collection visuelle.",
     excerpt:
-      "Projet 111 transforme les 111 quartiers de Marseille en une collection de t-shirts structurée autour d’un système graphique complet : dos cartographique, cœur par arrondissement, label textile et gabians illustrés.",
-    role: "Concept, système graphique textile, illustration, charte, mockups, direction artistique et vidéos promotionnelles.",
+      "Projet 111 transforme les 111 quartiers de Marseille en un langage visuel cohérent fondé sur la cartographie, l’architecture locale, les repères territoriaux et les récits culturels.",
+    role: "Concept, système d’identité territorial, illustration, charte, applications, direction artistique et campagne vidéo.",
     tools: ["Illustrator", "Photoshop", "Figma", "Premiere Pro", "Impression DTF"],
-    services: ["Textile design", "Cultural branding", "Illustration", "Art direction"],
+    services: ["Cultural branding", "Identity system", "Illustration", "Art direction"],
     tone: {
       name: "Marseille System",
       background: "from-[#10161c] via-[#006d77] to-[#f2a541]",
@@ -107,11 +107,11 @@ export const projects: Project[] = [
     context:
       "Projet personnel autour de Marseille, de ses quartiers, de ses symboles et de son identité populaire.",
     objective:
-      "Créer une collection textile cohérente capable de représenter chaque quartier de Marseille à travers un langage graphique unique, lisible et déclinable.",
+      "Créer un système d’identité cohérent capable de représenter chaque quartier de Marseille à travers un langage graphique unique, lisible et déclinable.",
     approach:
       "Construire un système visuel modulaire fondé sur la cartographie, la typographie brute, les repères territoriaux et des détails illustratifs propres à chaque quartier.",
     solution:
-      "Un système textile complet combinant 111 visuels dos, 16 déclinaisons cœur, un label de collection et une série de gabians personnalisés.",
+      "Un système territorial complet combinant 111 identités de quartier, 16 repères d’arrondissement, une signature commune et une série de gabians personnalisés.",
     impact:
       "Le projet démontre une capacité à concevoir une identité déclinable à grande échelle, à structurer un univers graphique cohérent et à transformer une ville en collection visuelle.",
     metrics: [

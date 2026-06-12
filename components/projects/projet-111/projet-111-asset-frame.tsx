@@ -37,7 +37,7 @@ export function Projet111AssetFrame({
   return (
     <figure
       className={cn(
-        "group relative overflow-hidden rounded-[2rem] border border-black/10 bg-[#f6f1e8] shadow-[0_26px_80px_rgba(10,15,20,0.18)]",
+        "group relative overflow-hidden rounded-[0.5rem] border border-black/10 bg-[#f6f1e8] shadow-[0_26px_80px_rgba(10,15,20,0.16)]",
         className,
       )}
     >
@@ -52,7 +52,7 @@ export function Projet111AssetFrame({
             onError={() => setFailed(true)}
             className={cn(
               "h-full w-full transition duration-700 group-hover:scale-[1.025]",
-              contain ? "object-contain p-8" : "object-cover",
+              contain ? "object-contain p-5 sm:p-8" : "object-cover",
             )}
           />
         ) : (
