@@ -579,50 +579,50 @@ export const projects: Project[] = [
   {
     slug: "cercle-des-dauphins",
     title: "Cercle des Dauphins",
-    category: "Editorial Design / Architectural Visual Identity / 3D",
+    category: "Editorial Design / Architectural Visualization / Graphic Presentation",
     year: "2024",
-    client: "Projet conceptuel",
+    client: "Projet de fin d’études — École de Condé",
     featured: true,
     tier: "featured",
-    shortPitch: "Un projet complet de présentation architecturale, entre design éditorial, identité visuelle et 3D.",
+    shortPitch: "Valorisation graphique et visuelle d’un projet de rénovation intérieure inspiré par la mer, la lumière et la matérialité.",
     excerpt:
-      "Design complet, mise en page, charte graphique, retouche de plans et réalisations 3D pour construire une présentation architecturale cohérente et premium.",
-    role: "Direction éditoriale, charte graphique, retouche de plans, composition de dossier et rendus 3D.",
+      "Ce projet présente la mise en page, la visualisation 3D et la retouche d’un projet de fin d’études en architecture intérieure, à travers 12 planches, 10 images 3D et 15 plans pensés comme un récit visuel cohérent.",
+    role: "Mise en page de 12 planches, réalisation et retouche de 10 images 3D, valorisation de 15 plans, textures, lumière et structuration éditoriale.",
     tools: ["InDesign", "Photoshop", "Illustrator", "3D rendering"],
-    services: ["Editorial direction", "Architectural identity", "3D visuals", "Presentation design"],
+    services: ["Editorial design", "Architectural visualization", "Image retouching", "Graphic presentation"],
     tone: {
       name: "Architectural Blue",
       background: "from-[#0a1118] via-[#24556f] to-[#d9d6c8]",
       accent: "#77a7bb",
     },
     context:
-      "Le projet demandait une présentation visuelle complète, capable de rendre un univers architectural lisible, cohérent et désirable.",
+      "Projet long de fin d’études à l’École de Condé, développé pour accompagner et mettre en valeur un projet d’architecture intérieure à travers un travail complet de communication visuelle.",
     objective:
-      "Créer un dossier visuel premium où plans, rendus, typographie et identité fonctionnent comme un ensemble éditorial maîtrisé.",
+      "Créer une présentation éditoriale claire, élégante et immersive permettant de révéler les qualités sensibles, spatiales et matérielles du projet architectural.",
     approach:
-      "Le travail s’appuie sur une grille calme, une retouche précise des plans et un traitement 3D qui soutient la projection plutôt que l’effet décoratif.",
+      "Structurer un système de planches, d’images, de plans et de retouches capable de transformer un contenu complexe en expérience visuelle fluide et premium.",
     solution:
-      "La charte, la mise en page et les visuels 3D construisent une narration architecturale claire, structurée et élégante.",
+      "Une valorisation graphique complète mêlant mise en page, visualisation 3D, retouche d’image, textures, lumière et narration visuelle.",
     impact:
-      "Le projet démontre une capacité à orchestrer des contenus complexes et à les transformer en présentation hautement lisible.",
+      "Le projet démontre la capacité à traduire un projet architectural en récit éditorial lisible, atmosphérique et professionnel.",
     metrics: [
-      { label: "Discipline", value: "Editorial + 3D" },
-      { label: "Support", value: "Dossier complet" },
-      { label: "Approche", value: "Architecture visuelle" },
+      { label: "Planches", value: "12" },
+      { label: "Images 3D", value: "10" },
+      { label: "Plans valorisés", value: "15" },
     ],
-    deliverables: ["Charte graphique", "Mise en page", "Retouche de plans", "Rendus 3D", "Dossier de présentation"],
+    deliverables: ["12 planches de présentation", "Formats A0, A1 et A4", "10 images 3D", "15 plans", "Retouches d’images", "Mise en page éditoriale", "Travail sur les textures", "Lumière", "Visualisation architecturale"],
     sections: [
       {
-        title: "Direction éditoriale",
-        body: "La mise en page organise des contenus techniques et visuels avec une hiérarchie claire, afin de rendre le projet accessible et premium.",
+        title: "Editorial layout system",
+        body: "Une grille calme organise formats A0, A1 et A4, articule plans, rendus, textes et titres, puis transforme un dossier complexe en narration fluide.",
       },
       {
-        title: "Plans et 3D",
-        body: "Les plans retravaillés et les rendus 3D participent au même langage visuel, sans rupture entre information et projection.",
+        title: "Architectural visualization",
+        body: "Plans valorisés, images 3D et retouches fonctionnent ensemble pour clarifier les espaces et révéler leur lumière, leurs matières et leurs ambiances.",
       },
       {
-        title: "Cohérence globale",
-        body: "Le projet montre comment une charte graphique peut donner de la valeur à un sujet architectural complet.",
+        title: "Visual narrative",
+        body: "La mer, la lumière et leurs variations deviennent un fil conducteur graphique reliant restaurant, vestiaire, bassin et paysage maritime.",
       },
     ],
     gallery: [
