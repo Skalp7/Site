@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
 
 import { BrannerCaseStudy } from "@/components/projects/branner/branner-case-study";
+import { BigFernandCaseStudy } from "@/components/projects/big-fernand/big-fernand-case-study";
 import { CultureCaseStudy } from "@/components/projects/culture-arabesque/culture-case-study";
+import { KickOffCaseStudy } from "@/components/projects/culture-arabesque-kick-off/kick-off-case-study";
 import { DauphinsCaseStudy } from "@/components/projects/dauphins/dauphins-case-study";
 import { ForsouthCaseStudy } from "@/components/projects/forsouth/forsouth-case-study";
 import { MelodigitaleCaseStudy } from "@/components/projects/melodigitale-festival/melodigitale-case-study";
@@ -45,12 +47,20 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
     return <BrannerCaseStudy project={project} />;
   }
 
+  if (project.slug === "big-fernand-marseille-canebiere") {
+    return <BigFernandCaseStudy project={project} />;
+  }
+
   if (project.slug === "purple-global-commerce") {
     return <PurpleCaseStudy project={project} />;
   }
 
   if (project.slug === "culture-arabesque") {
     return <CultureCaseStudy project={project} />;
+  }
+
+  if (project.slug === "culture-arabesque-kick-off-insta") {
+    return <KickOffCaseStudy project={project} />;
   }
 
   if (project.slug === "melodigitale-festival") {

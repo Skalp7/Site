@@ -473,6 +473,111 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "culture-arabesque-kick-off-insta",
+    title: "Culture Arabesque — Kick off Insta",
+    category: "Cultural Branding / Motion Design / Event Communication",
+    year: "2020",
+    client: "Culture Arabesque",
+    featured: true,
+    tier: "featured",
+    shortPitch:
+      "Redesign d’un logo événementiel et création d’un système de motion design pour un dialogue franco-allemand autour du football, de la jeunesse et de la vidéo.",
+    excerpt:
+      "Ce projet associe redesign identitaire, montage vidéo et motion design pour accompagner Kick off Insta, une initiative numérique interculturelle entre Marseille et Hambourg mêlant sport, langage et échanges citoyens.",
+    role: "Redesign logo événementiel, identité d’équipe, montage vidéo, motion design, transitions bilingues et sound design.",
+    tools: ["Illustrator", "After Effects", "Premiere Pro", "Photoshop"],
+    services: ["Event identity redesign", "Motion design system", "Video editing", "Intercultural communication"],
+    tone: {
+      name: "Intercultural Kick Off",
+      background: "from-[#071a18] via-[#167967] to-[#f2c94c]",
+      accent: "#f2c94c",
+    },
+    context:
+      "Déclinaison numérique de la Coupe arabesques pendant la pandémie, pensée pour maintenir le lien entre de jeunes participant(e)s français(es) et allemand(e)s à travers vidéos, ateliers, challenges et contenus interactifs.",
+    objective:
+      "Créer une identité événementielle et un habillage vidéo capables de relier l’univers du football à celui d’un projet culturel et interculturel déjà existant.",
+    approach:
+      "Conserver l’esthétique du logo d’origine tout en l’adaptant à l’événement sportif, créer une identité secondaire d’équipe avec un orque stylisé, puis construire un système motion cohérent autour des rushs, interviews et du dialogue bilingue.",
+    solution:
+      "Un redesign de logo associé à une identité d’équipe secondaire, une introduction vidéo, des transitions animées, un montage rythmé et des habillages pensés pour la clarté et l’énergie de la communication.",
+    impact:
+      "Le projet démontre la capacité à adapter une identité existante, créer des déclinaisons graphiques cohérentes, construire un langage visuel animé et rendre un projet interculturel plus vivant, lisible et engageant.",
+    metrics: [
+      { label: "Villes", value: "Marseille / Hambourg" },
+      { label: "Langues", value: "FR / DE" },
+      { label: "Système", value: "Identity + motion" },
+    ],
+    deliverables: [
+      "Redesign logo",
+      "Logo événementiel",
+      "Team logo — orque stylisé",
+      "Intro vidéo",
+      "Motion design",
+      "Montage vidéo",
+      "Transitions animées",
+      "Habillage interviews",
+      "Sound design",
+      "Communication visuelle événementielle",
+    ],
+    sections: [
+      {
+        title: "Logo redesign",
+        body: "Le ruban du signe historique est dupliqué et superposé en symétrie pour enrouler un ballon autour de la silhouette. Le geste conserve l’énergie d’origine tout en évoquant l’arrêt d’un gardien.",
+      },
+      {
+        title: "Team identity",
+        body: "Un orque stylisé devient l’emblème secondaire d’une équipe : un signe jeune, sportif et immédiatement identifiable, intégré au langage visuel global.",
+      },
+      {
+        title: "Visual system",
+        body: "Rubans, trajectoires, ballon, typographie et repères bilingues composent un système dynamique capable de circuler entre identité événementielle et habillage vidéo.",
+      },
+      {
+        title: "Motion design system",
+        body: "L’introduction, les transitions, inserts et habillages d’interviews forment un langage animé cohérent, conçu pour relier sport, culture et dialogue.",
+      },
+      {
+        title: "Video editing",
+        body: "Le montage transforme les rushs de match en narration énergique, lisible et humaine, avec une alternance fluide entre action, présentation et prise de parole.",
+      },
+      {
+        title: "Sound & rhythm",
+        body: "Les effets sonores soutiennent les gestes, les changements de séquence et l’énergie sportive sans prendre le dessus sur la compréhension.",
+      },
+      {
+        title: "Intercultural communication",
+        body: "Le système bilingue rend visibles les échanges entre Marseille et Hambourg et utilise le football comme point de rencontre autour de thèmes citoyens.",
+      },
+      {
+        title: "Final impact",
+        body: "L’identité adaptée et son langage motion donnent au projet numérique une présence vivante, cohérente et accessible, fidèle à l’esprit de Culture Arabesque.",
+      },
+    ],
+    gallery: [
+      {
+        id: "kick-off-logo-redesign",
+        title: "Event logo redesign",
+        caption: "Le ruban historique devient trajectoire sportive et accueille le ballon.",
+        aspect: "wide",
+        tone: { name: "Goalkeeper gesture", background: "from-[#071a18] via-[#167967] to-[#f2c94c]", accent: "#f2c94c" },
+      },
+      {
+        id: "kick-off-orca-team",
+        title: "Orca team identity",
+        caption: "Un emblème secondaire conçu pour l’énergie collective et la reconnaissance.",
+        aspect: "square",
+        tone: { name: "Team emblem", background: "from-[#071a18] via-[#246e87] to-[#ffffff]", accent: "#ffffff" },
+      },
+      {
+        id: "kick-off-motion",
+        title: "Bilingual motion system",
+        caption: "Transitions, interviews et inserts organisent la circulation entre les langues.",
+        aspect: "landscape",
+        tone: { name: "FR / DE motion", background: "from-[#101010] via-[#167967] to-[#f2c94c]", accent: "#f2c94c" },
+      },
+    ],
+  },
+  {
     slug: "melodigitale-festival",
     title: "Melodigitale Festival",
     category: "Festival Branding / Art Direction / Event Design",
@@ -860,6 +965,104 @@ export const projects: Project[] = [
         caption: "Une affiche de sensibilisation construite autour d’un message direct.",
         aspect: "portrait",
         tone: { name: "Phone alert", background: "from-[#0d1117] via-[#1f6feb] to-[#ff4d4d]", accent: "#ff4d4d" },
+      },
+    ],
+  },
+  {
+    slug: "big-fernand-marseille-canebiere",
+    title: "Big Fernand Marseille — Canebière",
+    category: "Creative Application / Local Communication / Landing Page Concept",
+    year: "2026",
+    client: "Proposition de collaboration — Big Fernand Marseille",
+    featured: false,
+    tier: "tailored",
+    statusLabel: "Candidature créative non officielle",
+    shortPitch:
+      "Proposition de collaboration visuelle pour accompagner l’ouverture de l’atelier Big Fernand Marseille — Canebière à travers une landing page locale et un système de contenus Instagram.",
+    excerpt:
+      "Une page de candidature créative pensée comme une proposition concrète : adapter l’univers Big Fernand à Marseille, structurer une présence Instagram locale et imaginer une landing page dédiée à l’atelier Canebière.",
+    role: "Direction artistique locale, landing page concept, système social media, visuels d’ouverture et proposition de collaboration.",
+    tools: ["Figma", "Photoshop", "Illustrator", "Premiere Pro", "After Effects"],
+    services: ["Local communication", "Landing page concept", "Social media direction", "Creative application"],
+    tone: {
+      name: "Canebière Hamburgé",
+      background: "from-[#111111] via-[#1d6fa5] to-[#f0a43a]",
+      accent: "#f0a43a",
+    },
+    context:
+      "Candidature personnalisée réalisée à l’occasion de l’ouverture d’un nouvel atelier Big Fernand en plein cœur de Marseille, sur la Canebière.",
+    objective:
+      "Montrer comment une communication visuelle locale peut renforcer la visibilité de l’atelier, créer du lien avec les Marseillais et soutenir l’ouverture à travers des contenus clairs, vivants et cohérents.",
+    approach:
+      "Respecter l’univers Big Fernand tout en proposant une adaptation locale inspirée de Marseille, de la Canebière et des usages social media actuels.",
+    solution:
+      "Une proposition de landing page, une mini-charte de communication locale et un système de contenus Instagram prêts à être enrichis avec des assets officiels.",
+    impact:
+      "La page démontre une capacité à transformer une candidature en proposition concrète, visuelle et activable, pensée comme une collaboration souple autour de la communication locale.",
+    metrics: [
+      { label: "Nature", value: "Candidature créative" },
+      { label: "Territoire", value: "Marseille / Canebière" },
+      { label: "Activation", value: "Landing + Instagram" },
+    ],
+    deliverables: [
+      "Landing page concept",
+      "Mini-charte de communication locale",
+      "Direction artistique social media",
+      "Posts Instagram",
+      "Stories Instagram",
+      "Visuels d’ouverture",
+      "Système de contenus",
+      "Adaptations graphiques",
+      "Mockups",
+      "Proposition de collaboration",
+    ],
+    sections: [
+      {
+        title: "Local opportunity",
+        body: "L’ouverture sur la Canebière représente une occasion forte d’installer une présence locale, de créer du lien avec les Marseillais et de faire vivre l’adresse au-delà du lancement.",
+      },
+      {
+        title: "Landing page concept",
+        body: "Une page locale complémentaire au site national réunit accès, horaires, commande, réservation, carte, actualités et personnalité propre de l’atelier.",
+      },
+      {
+        title: "Visual direction",
+        body: "La proposition respecte les codes Big Fernand — noir, crème, photographie gourmande, illustrations et ton direct — puis les adapte avec mesure à l’énergie marseillaise.",
+      },
+      {
+        title: "Instagram role",
+        body: "Une présence régulière et incarnée peut présenter l’équipe, les Hamburgés, les coulisses, le quartier, les actualités et les rendez-vous de l’atelier.",
+      },
+      {
+        title: "Content system",
+        body: "Des familles de contenus simples à maintenir structurent lancement, produits, coulisses, équipe, Canebière, offres ponctuelles et formats interactifs.",
+      },
+      {
+        title: "Collaboration",
+        body: "La proposition peut prendre la forme d’un stage, d’une mission courte, d’un accompagnement ponctuel ou d’un renfort régulier en création de contenus.",
+      },
+    ],
+    gallery: [
+      {
+        id: "big-fernand-local-landing",
+        title: "Local landing page",
+        caption: "Une porte d’entrée locale pour découvrir, commander et suivre l’atelier Canebière.",
+        aspect: "wide",
+        tone: { name: "Canebière landing", background: "from-[#111111] via-[#f3ead9] to-[#1d6fa5]", accent: "#1d6fa5" },
+      },
+      {
+        id: "big-fernand-instagram",
+        title: "Local Instagram system",
+        caption: "Des formats reconnaissables pour faire vivre l’ouverture et le quotidien.",
+        aspect: "square",
+        tone: { name: "Local feed", background: "from-[#f3ead9] via-[#e04d38] to-[#111111]", accent: "#e04d38" },
+      },
+      {
+        id: "big-fernand-marseille",
+        title: "Marseille adaptation",
+        caption: "Une couleur locale maîtrisée, fidèle à l’esprit de l’atelier.",
+        aspect: "portrait",
+        tone: { name: "Marseille Fernand", background: "from-[#1d6fa5] via-[#f0a43a] to-[#f3ead9]", accent: "#f0a43a" },
       },
     ],
   },
